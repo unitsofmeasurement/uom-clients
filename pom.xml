@@ -86,7 +86,12 @@
 	</scm>
 	<modules>
 		<module>fitbit-client-api</module>
+		<module>fitbit-client-cdi</module>
 	</modules>
 	<name>Units of Measurement Fitbit Client</name>
 	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/unitsofmeasurement/fitbit-client/issues</url>
+	</issueManagement>
 </project>

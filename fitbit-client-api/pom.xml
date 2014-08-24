@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.unitsofmeasurement.client</groupId>
+    <groupId>tec.units.client</groupId>
     <artifactId>fitbit-client</artifactId>
-    <version>0.1</version>
+    <version>0.2-SNAPSHOT</version>
   </parent>
   <artifactId>fitbit-client-api</artifactId>
   <name>Units of Measurement Fitbit Client API</name>
@@ -22,16 +22,16 @@
 				<artifactId>unit-api</artifactId>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement</groupId>
+				<groupId>tec.uom</groupId>
 				<artifactId>unit-ri</artifactId>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.lib</groupId>
-				<artifactId>unit-lib-health</artifactId>
+				<groupId>tec.uom.lib</groupId>
+				<artifactId>uom-lib-health</artifactId>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.lib</groupId>
-				<artifactId>unit-lib-health-ri</artifactId>
+				<groupId>tec.uom.lib</groupId>
+				<artifactId>uom-lib-health-ri</artifactId>
 			</dependency>
     </dependencies>
 </project>

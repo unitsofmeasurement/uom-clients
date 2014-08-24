@@ -1,17 +1,17 @@
-package org.unitsofmeasurement.client.fitbit.model.archievement;
+package tec.units.client.fitbit.model.archievement;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
-import org.unitsofmeasurement.domain.health.Floor;
-import org.unitsofmeasurement.domain.health.Step;
+import tec.uom.lib.domain.health.Floor;
+import tec.uom.lib.domain.health.Step;
+
 
 /**
- * Created by IntelliJ IDEA.
  * User: Werner
- * Date: 10/18/11
- * Time: 12:56 AM
+ * Date: 08/24/14
+ * Time: 18:20
  */
 public class Achievement {
 

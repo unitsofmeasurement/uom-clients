@@ -13,14 +13,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
-		<artifactId>unitsofmeasurement-parent</artifactId>
-		<groupId>org.unitsofmeasurement</groupId>
-		<version>0.6</version>
+		<artifactId>uom-parent</artifactId>
+		<groupId>tec.uom</groupId>
+		<version>0.7-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.unitsofmeasurement.client</groupId>
-	<version>0.1</version>
+	<groupId>tec.units.client</groupId>
+	<version>0.2-SNAPSHOT</version>
 	<artifactId>fitbit-client</artifactId>
 	<packaging>pom</packaging>
 
@@ -32,8 +32,8 @@
 		<project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-		<ri.version>0.3</ri.version>
-		<lib.version>0.2</lib.version>
+		<ri.version>0.5-SNAPSHOT</ri.version>
+		<lib.version>0.4-SNAPSHOT</lib.version>
 	</properties>
 
 	<dependencyManagement>
@@ -51,27 +51,27 @@
 				<version>${jsr.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement</groupId>
+				<groupId>tec.uom</groupId>
 				<artifactId>unit-ri</artifactId>
 				<version>${ri.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.lib</groupId>
-				<artifactId>unit-lib-health</artifactId>
+				<groupId>tec.uom.lib</groupId>
+				<artifactId>uom-lib-health</artifactId>
 				<version>${lib.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.lib</groupId>
-				<artifactId>unit-lib-health-ri</artifactId>
+				<groupId>tec.uom.lib</groupId>
+				<artifactId>uom-lib-health-ri</artifactId>
 				<version>${lib.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.client</groupId>
+				<groupId>tec.units.client</groupId>
 				<artifactId>fitbit-client-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unitsofmeasurement.client</groupId>
+				<groupId>tec.units.client</groupId>
 				<artifactId>fitbit-client-cdi</artifactId>
 				<version>${project.version}</version>
 			</dependency>

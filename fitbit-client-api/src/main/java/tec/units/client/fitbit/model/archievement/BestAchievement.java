@@ -1,15 +1,16 @@
-package org.unitsofmeasurement.client.fitbit.model.archievement;
+package tec.units.client.fitbit.model.archievement;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
-import javax.measure.util.TimedData;
 
-import org.unitsofmeasurement.domain.health.Floor;
-import org.unitsofmeasurement.domain.health.Step;
+import tec.uom.ri.util.TimedData;
+
+import tec.uom.lib.domain.health.Floor;
+import tec.uom.lib.domain.health.Step;
 
 /**
- * Created by Jboss Studio. User: Werner Date: 10/18/11 Time: 12:56 AM
+ * Created by Jboss Studio. User: Werner Date: 08/24/14 Time: 18:20
  */
 public class BestAchievement {
 

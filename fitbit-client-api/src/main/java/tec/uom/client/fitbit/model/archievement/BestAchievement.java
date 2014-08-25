@@ -4,7 +4,7 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
-import tec.uom.ri.util.TimedData;
+import tec.units.ri.util.TimedData;
 
 import tec.uom.lib.domain.health.Floor;
 import tec.uom.lib.domain.health.Step;

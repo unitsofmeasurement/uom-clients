@@ -5,4 +5,4 @@
  * @author Werner
  *
  */
-package tec.units.client.fitbit.model;
+package tec.uom.client.fitbit.model;

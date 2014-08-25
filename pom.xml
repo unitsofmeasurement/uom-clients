@@ -19,7 +19,7 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>tec.units.client</groupId>
+	<groupId>tec.uom.client</groupId>
 	<version>0.2-SNAPSHOT</version>
 	<artifactId>fitbit-client</artifactId>
 	<packaging>pom</packaging>
@@ -66,12 +66,12 @@
 				<version>${lib.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.units.client</groupId>
+				<groupId>tec.uom.client</groupId>
 				<artifactId>fitbit-client-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.units.client</groupId>
+				<groupId>tec.uom.client</groupId>
 				<artifactId>fitbit-client-cdi</artifactId>
 				<version>${project.version}</version>
 			</dependency>

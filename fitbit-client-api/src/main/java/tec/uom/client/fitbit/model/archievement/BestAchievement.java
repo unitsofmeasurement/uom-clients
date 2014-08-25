@@ -1,4 +1,4 @@
-package tec.units.client.fitbit.model.archievement;
+package tec.uom.client.fitbit.model.archievement;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Energy;

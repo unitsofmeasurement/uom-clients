@@ -2,9 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>tec.uom.client</groupId>
-    <artifactId>fitbit-client</artifactId>
+    <artifactId>uom-fitbit</artifactId>
     <version>0.2-SNAPSHOT</version>
   </parent>
-  <artifactId>fitbit-client-cdi</artifactId>
-  <name>Units of Measurement Fitbit Client CDI</name>
+  <artifactId>uom-fitbit-cdi</artifactId>
+  <name>Units of Measurement for Fitbit CDI Implementation</name>
 </project>

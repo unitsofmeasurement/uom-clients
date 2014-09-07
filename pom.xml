@@ -21,7 +21,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
 	<version>0.2-SNAPSHOT</version>
-	<artifactId>fitbit-client</artifactId>
+	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>
 
 	<!-- ======================================================= -->
@@ -88,7 +88,7 @@
 		<module>fitbit-client-api</module>
 		<module>fitbit-client-cdi</module>
 	</modules>
-	<name>Units of Measurement Fitbit Client</name>
+	<name>Units of Measurement Client for Fitbit </name>
 	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>
 	<issueManagement>
 		<system>GitHub</system>

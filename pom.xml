@@ -14,12 +14,12 @@
 	<parent>
 		<artifactId>uom-parent</artifactId>
 		<groupId>tec.uom</groupId>
-		<version>0.7-SNAPSHOT</version>
+		<version>0.7</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.2</version>
 	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>
 
@@ -31,8 +31,8 @@
 		<project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-		<ri.version>0.5-SNAPSHOT</ri.version>
-		<lib.version>0.4-SNAPSHOT</lib.version>
+		<ri.version>0.7</ri.version>
+		<lib.version>0.5</lib.version>
 	</properties>
 
 	<scm>

@@ -15,28 +15,26 @@
  */
 package tec.uom.client.fitbit.model.archievement;
 
-import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
-import tec.units.ri.util.TimedData;
-
+import tec.units.ri.Measurement;
 import tec.uom.lib.domain.health.Floor;
 import tec.uom.lib.domain.health.Step;
 
 /**
- * Created by Jboss Studio. User: Werner Date: 08/24/14 Time: 18:20
+ * Created by Jboss Studio. User: Werner Date: 12/31/14 Time: 00:40
  */
 public class BestAchievement {
 
-	private TimedData<Quantity<Energy>> caloriesOut;
-	private TimedData<Quantity<Floor>> floors;
-	private TimedData<Quantity<Length>> distance;
-	private TimedData<Quantity<Step>> steps;
+	private Measurement<Energy> caloriesOut;
+	private Measurement<Floor> floors;
+	private Measurement<Length> distance;
+	private Measurement<Step> steps;
 
-	public BestAchievement(TimedData<Quantity<Energy>> caloriesOut,
-			TimedData<Quantity<Floor>> floors, TimedData<Quantity<Length>> distance,
-			TimedData<Quantity<Step>> steps) {
+	public BestAchievement(Measurement<Energy> caloriesOut,
+			Measurement<Floor> floors, Measurement<Length> distance,
+			Measurement<Step> steps) {
 		this.caloriesOut = caloriesOut;
 		this.floors = floors;
 		this.distance = distance;
@@ -75,19 +73,19 @@ public class BestAchievement {
 //		}
 //	}
 
-	public TimedData<Quantity<Energy>> getCaloriesOut() {
+	public Measurement<Energy> getCaloriesOut() {
 		return caloriesOut;
 	}
 
-	public TimedData<Quantity<Floor>> getFloors() {
+	public Measurement<Floor> getFloors() {
 		return floors;
 	}
 
-	public TimedData<Quantity<Length>> getDistance() {
+	public Measurement<Length> getDistance() {
 		return distance;
 	}
 
-	public TimedData<Quantity<Step>> getSteps() {
+	public Measurement<Step> getSteps() {
 		return steps;
 	}
 

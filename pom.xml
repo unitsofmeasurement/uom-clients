@@ -14,12 +14,12 @@
 	<parent>
 		<artifactId>uom-parent</artifactId>
 		<groupId>tec.uom</groupId>
-		<version>0.8-SNAPSHOT</version>
+		<version>0.8-RC1</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
-	<version>0.3-SNAPSHOT</version>
+	<version>0.2</version>
 	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>
 
@@ -31,7 +31,7 @@
 		<project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-		<ri.version>0.8-SNAPSHOT</ri.version>
+		<ri.version>0.7</ri.version>
 		<lib.version>0.5</lib.version>
 	</properties>
 
@@ -57,7 +57,7 @@
 			<dependency>
 				<groupId>org.agorava</groupId>
 				<artifactId>agorava-bom</artifactId>
-				<version>0.7.1-SNAPSHOT</version>
+				<version>0.7.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

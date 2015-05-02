@@ -1,4 +1,4 @@
 fitbit-connector
 ================
 
-Fitbit Connector for Units of Measurement powered by Agorava
+Fitbit Client for Units of Measurement powered by Agorava

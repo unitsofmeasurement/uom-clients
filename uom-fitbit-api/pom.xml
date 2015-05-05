@@ -1,41 +1,51 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>tec.uom.client</groupId>
-    <artifactId>uom-fitbit</artifactId>
-    <version>0.2</version>
-  </parent>
-  <artifactId>uom-fitbit-api</artifactId>
-  <name>Units of Measurement for Fitbit API</name>
-  
-  <dependencies>
-        <dependency>
-            <groupId>org.agorava</groupId>
-            <artifactId>agorava-core-api</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tec.uom.client</groupId>
+		<artifactId>uom-fitbit</artifactId>
+		<version>0.2</version>
+	</parent>
+	<artifactId>uom-fitbit-api</artifactId>
+	<name>Units of Measurement for Fitbit API</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.agorava</groupId>
+			<artifactId>agorava-core-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.measure</groupId>
+			<artifactId>unit-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.units</groupId>
+			<artifactId>unit-ri</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.lib</groupId>
+			<artifactId>uom-lib-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.lib</groupId>
+			<artifactId>uom-lib-health</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.lib</groupId>
+			<artifactId>uom-lib-health-ri</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
         </dependency>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-        </dependency>
-        		<dependency>
-				<groupId>javax.measure</groupId>
-				<artifactId>unit-api</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>tec.units</groupId>
-				<artifactId>unit-ri</artifactId>
-			</dependency>
-			<dependency>
-                <groupId>tec.uom.lib</groupId>
-                <artifactId>uom-lib-common</artifactId>
-            </dependency>
-			<dependency>
-				<groupId>tec.uom.lib</groupId>
-				<artifactId>uom-lib-health</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>tec.uom.lib</groupId>
-				<artifactId>uom-lib-health-ri</artifactId>
-			</dependency>
-    </dependencies>
+	</dependencies>
 </project>

@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.devices;
+package tec.uom.client.fitbit.model.device;
 
 import tec.uom.client.fitbit.model.user.UserInfo;
 

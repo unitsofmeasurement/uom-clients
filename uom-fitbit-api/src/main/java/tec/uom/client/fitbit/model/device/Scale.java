@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.devices;
+package tec.uom.client.fitbit.model.device;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Time;

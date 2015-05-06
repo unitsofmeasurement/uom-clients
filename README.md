@@ -1,7 +1,7 @@
 uom-fitbit
 ==========
 
-Fitbit Client for Units of Measurement powered by Agorava
+[Fitbit](http://www.fitbit.com/) Client for Units of Measurement powered by [Agorava](http://agorava.org/)
 
 [![License](http://img.shields.io/badge/license-Apache2-red.svg)](http://opensource.org/licenses/apache-2.0)
 

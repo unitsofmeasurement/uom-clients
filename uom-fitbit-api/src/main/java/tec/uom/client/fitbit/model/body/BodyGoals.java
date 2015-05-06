@@ -12,9 +12,9 @@ import javax.measure.quantity.Mass;
 public class BodyGoals {
 
 	private Quantity<Mass> weight;
-    private Double fat;
+    private Quantity<Mass> fat;
 
-    public BodyGoals(Quantity<Mass> weight, Double fat) {
+    public BodyGoals(Quantity<Mass> weight, Quantity<Mass> fat) {
         this.weight = weight;
         this.fat = fat;
     }
@@ -24,7 +24,7 @@ public class BodyGoals {
 	}
 
 
-	public Double getFat() {
+	public Quantity<Mass> getFat() {
         return fat;
     }
 }

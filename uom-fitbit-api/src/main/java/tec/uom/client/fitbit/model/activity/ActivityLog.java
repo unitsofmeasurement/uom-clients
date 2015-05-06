@@ -15,11 +15,11 @@ import tec.uom.lib.domain.health.Step;
  */
 public class ActivityLog extends LoggedActivityReference {
     long logId;
-    String startTime;
+    Quantity<Time> startTime;
     boolean hasStartTime;
     boolean isFavorite;
 
-    public ActivityLog(long logId, long activityId, String name, String description, Long activityParentId, String activityParentName, String startTime,
+    public ActivityLog(long logId, long activityId, String name, String description, Long activityParentId, String activityParentName, Quantity<Time> startTime,
                        Quantity<Time> duration, Quantity<Length> distance, Quantity<Energy> calories, Quantity<Step> steps, boolean isFavorite) {
         super(activityId, name, description, activityParentId, activityParentName, calories, duration, distance, steps);
         this.logId = logId;
@@ -28,20 +28,11 @@ public class ActivityLog extends LoggedActivityReference {
         this.isFavorite = isFavorite;
     }
 
-    public ActivityLog(long logId, long activityId, String name, String description, Long activityParentId, String activityParentName, String startTime,
-                       boolean hasStartTime, Quantity<Time> duration, Quantity<Length> distance, Quantity<Energy> calories, Quantity<Step> steps, boolean isFavorite) {
-        super(activityId, name, description, activityParentId, activityParentName, calories, duration, distance, steps);
-        this.logId = logId;
-        this.startTime = startTime;
-        this.hasStartTime = hasStartTime;
-        this.isFavorite = isFavorite;
-    }
-
     public long getLogId() {
         return logId;
     }
 
-    public String getStartTime() {
+    public Quantity<Time> getStartTime() {
         return startTime;
     }
 

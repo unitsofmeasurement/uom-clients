@@ -6,7 +6,7 @@ import javax.measure.quantity.Mass;
 public class Body {
     private Quantity<Mass> weight;
     private double bmi;
-    private double fat;
+    private Quantity<Mass> fat;
     private double neck;
     private double bicep;
     private double forearm;
@@ -16,7 +16,7 @@ public class Body {
     private double thigh;
     private double calf;
 
-    public Body(Quantity<Mass> weight, double fat, double neck, double bicep, double forearm, double chest, double waist, double hips, double thigh, double calf) {
+    public Body(Quantity<Mass> weight, Quantity<Mass> fat, double neck, double bicep, double forearm, double chest, double waist, double hips, double thigh, double calf) {
         this.weight = weight;
         this.fat = fat;
         this.neck = neck;
@@ -37,7 +37,7 @@ public class Body {
         return bmi;
     }
 
-    public double getFat() {
+    public Quantity<Mass> getFat() {
         return fat;
     }
 

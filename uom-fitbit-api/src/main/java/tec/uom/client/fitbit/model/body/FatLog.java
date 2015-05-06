@@ -1,5 +1,9 @@
 package tec.uom.client.fitbit.model.body;
 
+import javax.measure.Quantity;
+import javax.measure.quantity.Mass;
+import javax.measure.quantity.Time;
+
 import org.joda.time.LocalDate;
 
 /**
@@ -11,11 +15,11 @@ import org.joda.time.LocalDate;
 public class FatLog {
 
     private long logId;
-    private double fat;
+    private Quantity<Mass> fat;
     private LocalDate date;
-    private String time;
+    private Quantity<Time> time;
 
-    public FatLog(long logId, double fat, LocalDate date, String time) {
+    public FatLog(long logId, Quantity<Mass> fat, LocalDate date, Quantity<Time> time) {
         this.logId = logId;
         this.fat = fat;
         this.date = date;
@@ -26,7 +30,7 @@ public class FatLog {
         return logId;
     }
 
-    public double getFat() {
+    public Quantity<Mass> getFat() {
         return fat;
     }
 
@@ -34,7 +38,7 @@ public class FatLog {
         return date;
     }
 
-    public String getTime() {
+    public Quantity<Time> getTime() {
         return time;
     }
 }

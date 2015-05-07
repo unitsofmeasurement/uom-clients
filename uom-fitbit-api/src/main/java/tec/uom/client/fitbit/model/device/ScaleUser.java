@@ -28,6 +28,7 @@ public class ScaleUser {
         return userId;
     }
 
+// TODO consider changing methods getUserId() and getUserName() to getId() and getName()
     public String getScaleUserName() {
         return scaleUserName;
     }

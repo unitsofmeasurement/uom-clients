@@ -1,6 +1,6 @@
 package tec.uom.client.fitbit.model.archievement;
 
-import org.joda.time.LocalDate;
+import hirondelle.date4j.DateTime;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,10 +10,10 @@ import org.joda.time.LocalDate;
  */
 public class BestAchievementItem {
 
-    private Double value;
-    private LocalDate date;
+    private final Double value;
+    private final DateTime date;
 
-    public BestAchievementItem(Double value, LocalDate date) {
+    public BestAchievementItem(Double value, DateTime date) {
         this.value = value;
         this.date = date;
     }
@@ -22,7 +22,7 @@ public class BestAchievementItem {
         return value;
     }
 
-    public LocalDate getDate() {
+    public DateTime getDate() {
         return date;
     }
 }

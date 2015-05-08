@@ -1,10 +1,10 @@
 package tec.uom.client.fitbit.model.body;
 
+import hirondelle.date4j.DateTime;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 import javax.measure.quantity.Time;
-
-import org.joda.time.LocalDate;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,13 +14,13 @@ import org.joda.time.LocalDate;
  */
 public class WeightLog {
 
-    private long logId;
-    private Quantity<Mass> weight;
-    private double bmi;
-    private LocalDate date;
-    private Quantity<Time> time;
+    private final long logId;
+    private final Quantity<Mass> weight;
+    private final double bmi; // TODO could use Quantity here, too, see BMIDemo
+    private final DateTime date;
+    private final Quantity<Time> time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
 
-    public WeightLog(long logId, Quantity<Mass> weight, double bmi, LocalDate date, Quantity<Time> time) {
+    public WeightLog(long logId, Quantity<Mass> weight, double bmi, DateTime date, Quantity<Time> time) {
         this.logId = logId;
         this.weight = weight;
         this.bmi = bmi;
@@ -40,7 +40,7 @@ public class WeightLog {
         return bmi;
     }
 
-    public LocalDate getDate() {
+    public DateTime getDate() {
         return date;
     }
 

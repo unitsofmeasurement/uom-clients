@@ -88,5 +88,4 @@ public class BestAchievement {
 	public Measurement<Step> getSteps() {
 		return steps;
 	}
-
 }

@@ -10,8 +10,6 @@ import hirondelle.date4j.DateTime;
  */
 public class BestAchievementItem {
 
-    private Double value;
-    private DateTime date;
     private final Double value;
     private final DateTime date;
 

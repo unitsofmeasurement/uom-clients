@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.foods;
+package tec.uom.client.fitbit.model.food;
 
 
 /**

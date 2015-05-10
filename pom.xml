@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Unit-API - Units of Measurement API for Java Copyright 2014, Werner 
+<!-- Units of Measurement Clients for Agorava Copyright 2014-2015, Werner 
 	Keil and individual contributors by the @author tag. Licensed under the Apache 
 	License, Version 2.0 (the "License"); you may not use this file except in 
 	compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
@@ -19,7 +19,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
-	<version>0.2</version>
+	<version>0.3-SNAPSHOT</version>
 	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>
 
@@ -36,9 +36,9 @@
 	</properties>
 
 	<scm>
-		<connection>scm:git:git://github.com/unitsofmeasurement/fitbit-client</connection>
-		<developerConnection>scm:git:git@github.com:unitsofmeasurement/fitbit-client.git</developerConnection>
-		<url>http://github.com/unitsofmeasurement/fitbit-client</url>
+		<connection>scm:git:git://github.com/unitsofmeasurement/uom-fitbit</connection>
+		<developerConnection>scm:git:git@github.com:unitsofmeasurement/uom-fitbit.git</developerConnection>
+		<url>http://github.com/unitsofmeasurement/uom-fitbit</url>
 		<tag>HEAD</tag>
 	</scm>
 	<modules>
@@ -49,7 +49,7 @@
 	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/unitsofmeasurement/fitbit-client/issues</url>
+		<url>https://github.com/unitsofmeasurement/uom-fitbit/issues</url>
 	</issueManagement>
 
 	<dependencyManagement>
@@ -95,6 +95,12 @@
 				<groupId>tec.uom.client</groupId>
 				<artifactId>fitbit-client-cdi</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<!-- TODO if we use uom-se, this could be ThreeTen, otherwise consider something slimmer like Date4J -->
+				<groupId>com.darwinsys</groupId>
+				<artifactId>hirondelle-date4j</artifactId>
+				<version>1.5.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

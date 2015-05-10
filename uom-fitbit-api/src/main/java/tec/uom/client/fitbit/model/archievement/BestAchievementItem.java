@@ -12,6 +12,8 @@ public class BestAchievementItem {
 
     private Double value;
     private DateTime date;
+    private final Double value;
+    private final DateTime date;
 
     public BestAchievementItem(Double value, DateTime date) {
         this.value = value;

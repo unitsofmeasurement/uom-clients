@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.devices;
+package tec.uom.client.fitbit.model.device;
 
 import tec.uom.client.fitbit.model.user.UserInfo;
 
@@ -28,6 +28,7 @@ public class ScaleUser {
         return userId;
     }
 
+// TODO consider changing methods getUserId() and getUserName() to getId() and getName()
     public String getScaleUserName() {
         return scaleUserName;
     }

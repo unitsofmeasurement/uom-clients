@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.devices;
+package tec.uom.client.fitbit.model.device;
 
 /**
  * Created by IntelliJ IDEA.
@@ -6,7 +6,6 @@ package tec.uom.client.fitbit.model.devices;
  * Date: 5/2/15
  * Time: 7:16 PM
  */
-public enum BodyType {
-    REGULAR,
-    LEAN
+public enum DeviceType {
+    TRACKER, SCALE
 }

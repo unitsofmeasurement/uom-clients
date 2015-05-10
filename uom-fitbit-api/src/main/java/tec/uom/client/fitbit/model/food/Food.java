@@ -1,17 +1,17 @@
-package tec.uom.client.fitbit.model.foods;
+package tec.uom.client.fitbit.model.food;
 
 import java.util.List;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Mass;
-
+import tec.units.ri.function.Nameable;
 /**
  * User: Anakar Parida
  * Date: May 6, 2015
  * Time: 2:53:29 PM
  */
-public class Food {
+public class Food implements Nameable {
     private final long foodId;
     private final String name;
     private final String brand;
@@ -32,6 +32,7 @@ public class Food {
         this.units = units;
     }
 
+    // TODO consider renaming getFoodId() to getId() using LongIdentifiable from uom-lib
     public final long getFoodId() {
         return foodId;
     }

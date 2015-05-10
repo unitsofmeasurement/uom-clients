@@ -1,10 +1,10 @@
 package tec.uom.client.fitbit.model.body;
 
+import hirondelle.date4j.DateTime;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 import javax.measure.quantity.Time;
-
-import org.joda.time.LocalDate;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,10 +17,10 @@ public class WeightLog {
     private long logId;
     private Quantity<Mass> weight;
     private double bmi;
-    private LocalDate date;
+    private DateTime date;
     private Quantity<Time> time;
 
-    public WeightLog(long logId, Quantity<Mass> weight, double bmi, LocalDate date, Quantity<Time> time) {
+    public WeightLog(long logId, Quantity<Mass> weight, double bmi, DateTime date, Quantity<Time> time) {
         this.logId = logId;
         this.weight = weight;
         this.bmi = bmi;
@@ -40,7 +40,7 @@ public class WeightLog {
         return bmi;
     }
 
-    public LocalDate getDate() {
+    public DateTime getDate() {
         return date;
     }
 

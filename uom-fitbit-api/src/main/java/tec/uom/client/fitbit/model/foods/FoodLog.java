@@ -1,6 +1,6 @@
 package tec.uom.client.fitbit.model.foods;
 
-import org.joda.time.LocalDate;
+import hirondelle.date4j.DateTime;
 
 /**
  * User: Anakar Parida
@@ -12,7 +12,7 @@ public class FoodLog {
     protected final LoggedFood loggedFood;
     protected final NutritionalValues nutritionalValues;
     protected final boolean isFavorite;
-    private LocalDate logDate;
+    private DateTime logDate;
 
     public FoodLog(long logId, LoggedFood loggedFood, NutritionalValues nutritionalValues, boolean favorite) {
         this.logId = logId;
@@ -21,7 +21,7 @@ public class FoodLog {
         isFavorite = favorite;
     }
 
-    public FoodLog(long logId, LoggedFood loggedFood, NutritionalValues nutritionalValues, boolean favorite, LocalDate logDate) {
+    public FoodLog(long logId, LoggedFood loggedFood, NutritionalValues nutritionalValues, boolean favorite, DateTime logDate) {
         this(logId, loggedFood, nutritionalValues, favorite);
         this.logDate = logDate;
     }
@@ -51,7 +51,7 @@ public class FoodLog {
      * @return the log date if it is set.
      * @throws UnsupportedOperationException if parsing is not supported
      */
-    public LocalDate getLogDate() {
+    public DateTime getLogDate() {
         if (null == logDate) {
             throw new UnsupportedOperationException("Log date is not available. This is an error only if log date was expected.");
         }

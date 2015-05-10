@@ -1,11 +1,12 @@
 package tec.uom.client.fitbit.model.user;
 
+import hirondelle.date4j.DateTime;
+
+import java.util.TimeZone;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Mass;
-
-import org.joda.time.DateTimeZone;
-import org.joda.time.LocalDate;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,7 +19,7 @@ public class UserInfo {
     private final String encodedId;
     private final String displayName;
     private final Gender gender;
-    private final LocalDate dateOfBirth;
+    private final DateTime dateOfBirth;
     private final Quantity<Length> height;
     private final Quantity<Mass> weight;
     private final Quantity<Length> strideLengthWalking;
@@ -29,8 +30,8 @@ public class UserInfo {
     private final String state;
     private final String city;
     private final String aboutMe;
-    private final LocalDate memberSince;
-    private final DateTimeZone timezone;
+    private final DateTime memberSince;
+    private final TimeZone timezone;
     /**
      * Millisecond offset to add to UTC to get timezone
      */
@@ -39,11 +40,11 @@ public class UserInfo {
     private final String avatar;
 
     public UserInfo(String encodedId, String displayName, Gender gender,
-			LocalDate dateOfBirth, Quantity<Length> height,
+    		DateTime dateOfBirth, Quantity<Length> height,
 			Quantity<Mass> weight, Quantity<Length> strideLengthWalking,
 			Quantity<Length> strideLengthRunning, String fullName,
 			String nickname, String country, String state, String city,
-			String aboutMe, LocalDate memberSince, DateTimeZone timezone,
+			String aboutMe, DateTime memberSince, TimeZone timezone,
 			int offsetFromUTCMillis, String locale, String avatar) {
 		super();
 		this.encodedId = encodedId;
@@ -79,7 +80,7 @@ public class UserInfo {
         return gender;
     }
 
-    public LocalDate getDateOfBirth() {
+    public DateTime getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -123,7 +124,7 @@ public class UserInfo {
         return aboutMe;
     }
 
-    public LocalDate getMemberSince() {
+    public DateTime getMemberSince() {
         return memberSince;
     }
 
@@ -131,7 +132,7 @@ public class UserInfo {
         return timezone.toString();
     }
 
-    public DateTimeZone timezone() {
+    public TimeZone timezone() {
         return timezone;
     }
 

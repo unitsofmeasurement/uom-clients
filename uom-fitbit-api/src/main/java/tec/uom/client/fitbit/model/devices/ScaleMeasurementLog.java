@@ -1,10 +1,10 @@
 package tec.uom.client.fitbit.model.devices;
 
+import hirondelle.date4j.DateTime;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 import javax.measure.quantity.Time;
-
-import org.joda.time.LocalDate;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,12 +17,12 @@ public class ScaleMeasurementLog {
     private Long logId;
     private Quantity<Mass> fat;
     private Quantity<Mass> weight;
-    private LocalDate date;
+    private DateTime date;
     private Quantity<Time> time;
     private String userId;
     private String scaleUserName;
 
-    public ScaleMeasurementLog(Long logId, Quantity<Mass> fat, Quantity<Mass> weight, LocalDate date, Quantity<Time> time, String userId, String scaleUserName) {
+    public ScaleMeasurementLog(Long logId, Quantity<Mass> fat, Quantity<Mass> weight, DateTime date, Quantity<Time> time, String userId, String scaleUserName) {
         this.logId = logId;
         this.fat = fat;
         this.weight = weight;
@@ -44,7 +44,7 @@ public class ScaleMeasurementLog {
         return weight;
     }
 
-    public LocalDate getDate() {
+    public DateTime getDate() {
         return date;
     }
 

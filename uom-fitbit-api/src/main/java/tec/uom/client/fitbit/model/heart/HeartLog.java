@@ -17,13 +17,13 @@ public class HeartLog implements LongIdentifiable{
     private final long logId;
     private final String tracker;
     private final Quantity<HeartRate> heartRate;
-    private final Quantity<Time> time;
+//    private final Quantity<Time> time;
 
-    public HeartLog(long logId, String tracker, Quantity<HeartRate> heartRate, Quantity<Time> time) {
+    public HeartLog(long logId, String tracker, Quantity<HeartRate> heartRate) { //, Quantity<Time> time) {
         this.logId = logId;
         this.tracker = tracker;
         this.heartRate = heartRate;
-        this.time = time;
+//        this.time = time;
     }
 
     public long getId() {
@@ -38,7 +38,7 @@ public class HeartLog implements LongIdentifiable{
         return heartRate;
     }
 
-    public Quantity<Time> getTime() {
-        return time;
-    }
+//    public Quantity<Time> getTime() {
+//        return time;
+//    }
 }

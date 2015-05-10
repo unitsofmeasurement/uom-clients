@@ -7,4 +7,45 @@
   </parent>
   <artifactId>uom-fitbit-cdi</artifactId>
   <name>Units of Measurement for Fitbit CDI Implementation</name>
+  
+      <dependencies>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>tec.uom.client</groupId>
+            <artifactId>uom-fitbit-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.agorava</groupId>
+            <artifactId>agorava-core-impl-cdi</artifactId>
+            <scope>test</scope>
+        </dependency>
+<!--  
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-depchain</artifactId>
+            <type>pom</type>
+        </dependency>
+-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+    </dependencies>
+  
 </project>

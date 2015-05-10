@@ -88,7 +88,7 @@
 			</dependency>
 			<dependency>
 				<groupId>tec.uom.client</groupId>
-				<artifactId>fitbit-client-api</artifactId>
+				<artifactId>uom-fitbit-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

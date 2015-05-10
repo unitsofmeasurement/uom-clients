@@ -41,10 +41,6 @@
 		<dependency>
 			<groupId>com.darwinsys</groupId>
 			<artifactId>hirondelle-date4j</artifactId>
-<<<<<<< HEAD
-			<version>1.5.0</version>
-=======
->>>>>>> 396119674c93b2538d75ebd820ef9ef04a8867a1
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

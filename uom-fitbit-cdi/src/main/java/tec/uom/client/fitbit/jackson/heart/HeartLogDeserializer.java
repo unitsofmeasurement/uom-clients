@@ -14,7 +14,7 @@ import tec.uom.lib.domain.health.ri.Health;
 
 /**
  * User: Werner
- * Date: 11/05/15
+ * Date: 05/11/15
  */
 public class HeartLogDeserializer extends JsonDeserializer<HeartLog> {
 
@@ -24,9 +24,14 @@ public class HeartLogDeserializer extends JsonDeserializer<HeartLog> {
         HeartLog log = new HeartLog(data.get("logId").asLong(),
                 data.get("tracker").asText(),
                 Quantities.getQuantity(data.get("heartRate").numberValue(), Health.BPM));
-//        if (data.has("incoming_status")) {	
-//            relationship.setIncomingStatus(data.get("incoming_status").asText());
-//        }
+
+        // TODO adjust to Jackson Binding
+        //if (jsonObject.has("time")) {
+        //    this.time = jsonObject.getString("time");
+        //} else {
+        //    this.time = null;
+        //}
+              
         return log;
     }
 }

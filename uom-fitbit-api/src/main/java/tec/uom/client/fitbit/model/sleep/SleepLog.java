@@ -1,5 +1,7 @@
 package tec.uom.client.fitbit.model.sleep;
 
+import hirondelle.date4j.DateTime;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Time;
 
@@ -11,19 +13,19 @@ import javax.measure.quantity.Time;
  */
 public class SleepLog {
     long logId;
-    Quantity<Time> startTime;
+    DateTime startTime;
     boolean isMainSleep;
     Quantity<Time> duration;
     Quantity<Time> minutesToFallAsleep;
     Quantity<Time> minutesAsleep;
     Quantity<Time> minutesAwake;
     Quantity<Time> minutesAfterWakeup;
-    Quantity<Time> awakeningsCount;
+    int awakeningsCount;
     Quantity<Time> timeInBed;
     int efficiency;
 
-    public SleepLog(long logId, Quantity<Time> startTime, boolean mainSleep, Quantity<Time> duration, Quantity<Time> minutesToFallAsleep,
-    		Quantity<Time> minutesAsleep, Quantity<Time> minutesAwake, Quantity<Time> minutesAfterWakeup, Quantity<Time> awakeningsCount, Quantity<Time> timeInBed,
+    public SleepLog(long logId, DateTime startTime, boolean mainSleep, Quantity<Time> duration, Quantity<Time> minutesToFallAsleep,
+    		Quantity<Time> minutesAsleep, Quantity<Time> minutesAwake, Quantity<Time> minutesAfterWakeup, int awakeningsCount, Quantity<Time> timeInBed,
                     int efficiency) {
         this.logId = logId;
         this.startTime = startTime;
@@ -42,7 +44,7 @@ public class SleepLog {
         return logId;
     }
 
-    public Quantity<Time> getStartTime() {
+    public DateTime getStartTime() {
         return startTime;
     }
 
@@ -70,7 +72,7 @@ public class SleepLog {
         return minutesAfterWakeup;
     }
 
-    public Quantity<Time> getAwakeningsCount() {
+    public int getAwakeningsCount() {
         return awakeningsCount;
     }
 

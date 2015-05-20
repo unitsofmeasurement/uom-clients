@@ -1,5 +1,5 @@
 package tec.uom.client.fitbit.model.sleep;
-
+// TODO should be jackson.sleep instead of model.sleep ;-)
 import hirondelle.date4j.DateTime;
 
 import java.io.IOException;

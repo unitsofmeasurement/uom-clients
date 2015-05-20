@@ -2,8 +2,6 @@ package tec.uom.client.fitbit.model.user;
 
 import hirondelle.date4j.DateTime;
 
-import java.util.TimeZone;
-
 import javax.measure.Quantity;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Mass;
@@ -31,7 +29,7 @@ public class UserInfo {
     private final String city;
     private final String aboutMe;
     private final DateTime memberSince;
-    private final TimeZone timezone;
+    /*private final TimeZone timezone;*/
     /**
      * Millisecond offset to add to UTC to get timezone
      */
@@ -44,7 +42,7 @@ public class UserInfo {
 			Quantity<Mass> weight, Quantity<Length> strideLengthWalking,
 			Quantity<Length> strideLengthRunning, String fullName,
 			String nickname, String country, String state, String city,
-			String aboutMe, DateTime memberSince, TimeZone timezone,
+			String aboutMe, DateTime memberSince, /*TimeZone timezone,*/
 			int offsetFromUTCMillis, String locale, String avatar) {
 		super();
 		this.encodedId = encodedId;
@@ -62,7 +60,7 @@ public class UserInfo {
 		this.city = city;
 		this.aboutMe = aboutMe;
 		this.memberSince = memberSince;
-		this.timezone = timezone;
+		/*this.timezone = timezone;*/
 		this.offsetFromUTCMillis = offsetFromUTCMillis;
 		this.locale = locale;
 		this.avatar = avatar;
@@ -128,13 +126,13 @@ public class UserInfo {
         return memberSince;
     }
 
-    public String getTimezone() {
+    /*public String getTimezone() {
         return timezone.toString();
     }
 
     public TimeZone timezone() {
         return timezone;
-    }
+    }*/
 
     public int getOffsetFromUTCMillis() {
         return offsetFromUTCMillis;

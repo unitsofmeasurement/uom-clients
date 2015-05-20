@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.sleep;
+package tec.uom.client.fitbit.jackson.sleep;
 // TODO should be jackson.sleep instead of model.sleep ;-)
 import hirondelle.date4j.DateTime;
 
@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
 import tec.units.ri.util.SI;
+import tec.uom.client.fitbit.model.sleep.SleepLog;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

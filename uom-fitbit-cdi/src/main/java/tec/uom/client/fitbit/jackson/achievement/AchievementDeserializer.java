@@ -1,4 +1,4 @@
-package tec.uom.client.fitbit.model.achievement;
+package tec.uom.client.fitbit.jackson.achievement;
 
 import java.io.IOException;
 

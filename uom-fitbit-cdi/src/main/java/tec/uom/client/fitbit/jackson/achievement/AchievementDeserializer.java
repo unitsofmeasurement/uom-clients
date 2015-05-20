@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.achievement;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.util.SI;
+import tec.units.ri.spi.SI;
 import tec.uom.client.fitbit.model.archievement.Achievement;
 import tec.uom.lib.domain.health.ri.Health;
 

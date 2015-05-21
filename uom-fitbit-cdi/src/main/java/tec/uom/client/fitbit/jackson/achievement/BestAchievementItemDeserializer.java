@@ -12,6 +12,10 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 
+/**
+ * User: Anakar 
+ * Date: 05/21/15
+ */
 public class BestAchievementItemDeserializer extends
 		JsonDeserializer<BestAchievementItem> {
 

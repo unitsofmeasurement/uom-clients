@@ -16,8 +16,9 @@ public class Body {
     private double thigh;
     private double calf;
 
-    public Body(Quantity<Mass> weight, Quantity<Mass> fat, double neck, double bicep, double forearm, double chest, double waist, double hips, double thigh, double calf) {
+    public Body(Quantity<Mass> weight, double bmi, Quantity<Mass> fat, double neck, double bicep, double forearm, double chest, double waist, double hips, double thigh, double calf) {
         this.weight = weight;
+        this.bmi = bmi;
         this.fat = fat;
         this.neck = neck;
         this.bicep = bicep;

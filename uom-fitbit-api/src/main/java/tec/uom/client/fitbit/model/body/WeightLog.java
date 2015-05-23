@@ -4,7 +4,6 @@ import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
-import javax.measure.quantity.Time;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,9 +17,9 @@ public class WeightLog {
     private final Quantity<Mass> weight;
     private final double bmi; // TODO could use Quantity here, too, see BMIDemo
     private final DateTime date;
-    private final Quantity<Time> time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
+    private final DateTime time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
 
-    public WeightLog(long logId, Quantity<Mass> weight, double bmi, DateTime date, Quantity<Time> time) {
+    public WeightLog(long logId, Quantity<Mass> weight, double bmi, DateTime date, DateTime time) {
         this.logId = logId;
         this.weight = weight;
         this.bmi = bmi;
@@ -44,7 +43,7 @@ public class WeightLog {
         return date;
     }
 
-    public Quantity<Time> getTime() {
+    public DateTime getTime() {
         return time;
     }
 }

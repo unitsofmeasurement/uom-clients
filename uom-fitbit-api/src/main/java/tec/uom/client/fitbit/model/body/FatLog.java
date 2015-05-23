@@ -4,7 +4,6 @@ import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
-import javax.measure.quantity.Time;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,9 +16,9 @@ public class FatLog {
     private final long logId;
     private final Quantity<Mass> fat;
     private final DateTime date;
-    private final Quantity<Time> time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
+    private final DateTime time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
 
-    public FatLog(long logId, Quantity<Mass> fat, DateTime date, Quantity<Time> time) {
+    public FatLog(long logId, Quantity<Mass> fat, DateTime date, DateTime time) {
         this.logId = logId;
         this.fat = fat;
         this.date = date;
@@ -38,7 +37,7 @@ public class FatLog {
         return date;
     }
 
-    public Quantity<Time> getTime() {
+    public DateTime getTime() {
         return time;
     }
 }

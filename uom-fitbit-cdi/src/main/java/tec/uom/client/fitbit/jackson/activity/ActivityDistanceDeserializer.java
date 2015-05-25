@@ -26,7 +26,7 @@ public class ActivityDistanceDeserializer extends
 		JsonNode data = jp.readValueAsTree();
 		ActivityDistance activityDistance = new ActivityDistance(data.get(
 				"activity").asText(), Quantities.getQuantity(data.get("distance")
-				.numberValue(), SI.METRE));
+				.numberValue(), SI.METRE)); // TODO this should be customizable (not just Metric)
 		return activityDistance;
 	}
 }

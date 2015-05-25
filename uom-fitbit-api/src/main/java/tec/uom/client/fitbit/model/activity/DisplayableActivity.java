@@ -1,7 +1,10 @@
 package tec.uom.client.fitbit.model.activity;
 
+import tec.units.ri.function.Nameable;
+import tec.uom.lib.common.function.LongIdentifiable;
 
-public class DisplayableActivity {
+
+public class DisplayableActivity implements Nameable, LongIdentifiable {
 
     private long id;
     private  String name;

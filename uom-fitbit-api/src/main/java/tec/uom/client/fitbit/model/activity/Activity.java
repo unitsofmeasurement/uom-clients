@@ -7,15 +7,15 @@ public class Activity extends DisplayableActivity {
 	private  String accessLevel;
     private boolean hasSpeed;
     private Double mets;
+    private List<ActivityLevel> activityLevels;
     
-    public Activity(long id, String name, String accessLevel, boolean hasSpeed, Double mets) {
+    public Activity(long id, String name, String accessLevel, boolean hasSpeed, Double mets, List<ActivityLevel> activityLevels) {
 		super(id, name);
 		this.accessLevel = accessLevel;
 		this.hasSpeed = hasSpeed;
 		this.mets = mets;
+		this.activityLevels = activityLevels;//Added this variable to constructor for initialization.
 	}
-
-    private List<ActivityLevel> activityLevels;
 
     public String getAccessLevel() {
         return accessLevel;

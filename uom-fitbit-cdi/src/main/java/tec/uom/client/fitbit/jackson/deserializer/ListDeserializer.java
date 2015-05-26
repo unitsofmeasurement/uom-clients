@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-// TODO where is this used? since package local
-class ListDeserializer<T> extends JsonDeserializer<List<T>> {
+// TODO where is this used? since package local -> Changed the access level to be used in other package
+public class ListDeserializer<T> extends JsonDeserializer<List<T>> {
 
 	@Override
 	public List<T> deserialize(JsonParser jp, DeserializationContext ctxt)

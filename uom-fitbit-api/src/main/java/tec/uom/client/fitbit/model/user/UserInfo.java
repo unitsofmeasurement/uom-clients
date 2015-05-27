@@ -34,7 +34,7 @@ public class UserInfo {
      * Millisecond offset to add to UTC to get timezone
      */
     private final int offsetFromUTCMillis;
-    private String locale;
+    private String locale; // TODO could we use Java Locale here?
     private final String avatar;
 
     public UserInfo(String encodedId, String displayName, Gender gender,

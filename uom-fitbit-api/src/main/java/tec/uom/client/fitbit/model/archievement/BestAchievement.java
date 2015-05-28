@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Units of Measurement
+ * Copyright 2014-2015 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package tec.uom.client.fitbit.model.archievement;
 
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
 import tec.units.ri.Measurement;
-import tec.uom.lib.domain.health.Floor;
-import tec.uom.lib.domain.health.Step;
+import tec.uom.domain.health.Floor;
+import tec.uom.domain.health.Step;
 
 /**
- * Created by Jboss Studio. User: Werner Date: 12/31/14 Time: 00:40
+ * Created by Jboss Studio. 
+ * User: Werner Date: 12/31/14 Time: 00:40
  */
 public class BestAchievement {
 

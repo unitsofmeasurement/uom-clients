@@ -5,7 +5,7 @@ import java.io.IOException;
 import tec.units.ri.quantity.Quantities;
 import tec.units.ri.spi.SI;
 import tec.uom.client.fitbit.model.archievement.Achievement;
-import tec.uom.lib.domain.health.ri.Health;
+import tec.uom.domain.health.ri.Health;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

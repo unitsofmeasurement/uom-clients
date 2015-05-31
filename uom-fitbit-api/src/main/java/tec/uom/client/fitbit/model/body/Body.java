@@ -20,9 +20,9 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Mass;
 
-public class Body {
-    private Quantity<Mass> weight;
-    private double bmi;
+public class Body { // TODO neck - calf should be Length
+    private Quantity<Mass> weight; // TODO not sure, if this is really Mass?
+    private double bmi; // TODO use BMI Quantity here, too
     private Quantity<Mass> fat;
     private double neck;
     private Quantity<Length> bicep;

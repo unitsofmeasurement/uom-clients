@@ -6,15 +6,21 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Mass;
 
+import org.agorava.spi.UserProfile;
+
 /**
  * Created by IntelliJ IDEA.
  * User: Anakar Parida
  * Date: 5/2/15
  * Time: 7:16 PM
  */
-public class UserInfo {
+public class UserInfo extends UserProfile {
 
-    private final String encodedId;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4026918068376292066L;
+	private final String encodedId;
     private final String displayName;
     private final Gender gender;
     private final DateTime dateOfBirth;
@@ -44,7 +50,7 @@ public class UserInfo {
 			String nickname, String country, String state, String city,
 			String aboutMe, DateTime memberSince, /*TimeZone timezone,*/
 			int offsetFromUTCMillis, String locale, String avatar) {
-		super();
+		super(encodedId);
 		this.encodedId = encodedId;
 		this.displayName = displayName;
 		this.gender = gender;
@@ -145,5 +151,10 @@ public class UserInfo {
     public String getAvatar() {
         return avatar;
     }
+
+	@Override
+	public String getProfileImageUrl() {
+		return avatar;
+	}
 
 }

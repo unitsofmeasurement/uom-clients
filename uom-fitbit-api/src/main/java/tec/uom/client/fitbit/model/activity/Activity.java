@@ -21,7 +21,7 @@ public class Activity extends DisplayableActivity {
         return accessLevel;
     }
 
-    public boolean getHasSpeed() {
+    public boolean hasSpeed() {
         return hasSpeed;
     }
 

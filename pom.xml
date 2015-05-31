@@ -14,7 +14,7 @@
 	<parent>
 		<artifactId>uom-parent</artifactId>
 		<groupId>tec.uom</groupId>
-		<version>0.8-RC1</version>
+		<version>0.8-RC2</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -33,6 +33,7 @@
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
 		<ri.version>0.8-RC1</ri.version>
 		<lib.version>0.7-SNAPSHOT</lib.version>
+		<agorava.version>0.7.0</agorava.version>
 	</properties>
 
 	<scm>
@@ -57,7 +58,7 @@
 			<dependency>
 				<groupId>org.agorava</groupId>
 				<artifactId>agorava-bom</artifactId>
-				<version>0.7.0</version>
+				<version>${agorava.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -97,7 +98,6 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<!-- TODO if we use uom-se, this could be ThreeTen, otherwise consider something slimmer like Date4J -->
 				<groupId>com.darwinsys</groupId>
 				<artifactId>hirondelle-date4j</artifactId>
 				<version>1.5.1</version>

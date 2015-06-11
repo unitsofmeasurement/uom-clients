@@ -5,22 +5,22 @@ import javax.measure.quantity.Speed;
 
 public class ActivityLevel extends DisplayableActivity{
 
-	private Quantity<Speed> minSpeedMPH;
-    private Quantity<Speed> maxSpeedMPH;
+	private Quantity<Speed> minSpeed;
+    private Quantity<Speed> maxSpeed;
     private double mets;
     
-    public ActivityLevel(long id, String name, Quantity<Speed> minSpeedMPH, Quantity<Speed> maxSpeedMPH) {
+    public ActivityLevel(long id, String name, Quantity<Speed> minSpeed, Quantity<Speed> maxSpeed) {
 		super(id, name);
-		this.minSpeedMPH = minSpeedMPH;
-		this.maxSpeedMPH = maxSpeedMPH;
+		this.minSpeed = minSpeed;
+		this.maxSpeed = maxSpeed;
 	}
 
-    public Quantity<Speed> getMaxSpeedMPH() {
-        return maxSpeedMPH;
+    public Quantity<Speed> getMaxSpeed() {
+        return maxSpeed;
     }
 
-    public Quantity<Speed> getMinSpeedMPH() {
-        return minSpeedMPH;
+    public Quantity<Speed> getMinSpeed() {
+        return minSpeed;
     }
 
     public double getMets() {

@@ -15,7 +15,6 @@ public class ActivityCategory {
     public ActivityCategory(int id, String name,
 			List<ActivityCategory> subCategories,
 			List<DisplayableActivity> activities) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.subCategories = subCategories;

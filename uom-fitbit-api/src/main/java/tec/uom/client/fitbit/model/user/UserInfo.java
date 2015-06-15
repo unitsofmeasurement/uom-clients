@@ -1,5 +1,7 @@
 package tec.uom.client.fitbit.model.user;
 
+import java.util.Locale;
+
 import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
@@ -40,7 +42,7 @@ public class UserInfo extends UserProfile {
      * Millisecond offset to add to UTC to get timezone
      */
     private final int offsetFromUTCMillis;
-    private String locale; // TODO could we use Java Locale here?
+    private Locale locale; // TODO could we use Java Locale here?
     private final String avatar;
 
     public UserInfo(String encodedId, String displayName, Gender gender,
@@ -49,7 +51,7 @@ public class UserInfo extends UserProfile {
 			Quantity<Length> strideLengthRunning, String fullName,
 			String nickname, String country, String state, String city,
 			String aboutMe, DateTime memberSince, /*TimeZone timezone,*/
-			int offsetFromUTCMillis, String locale, String avatar) {
+			int offsetFromUTCMillis, Locale locale, String avatar) {
 		super(encodedId);
 		this.encodedId = encodedId;
 		this.displayName = displayName;
@@ -144,7 +146,7 @@ public class UserInfo extends UserProfile {
         return offsetFromUTCMillis;
     }
 
-    public String getLocale() {
+    public Locale getLocale() {
         return locale;
     }
 

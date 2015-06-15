@@ -1,5 +1,8 @@
 package tec.uom.client.fitbit.model.food;
 
+import javax.measure.Quantity;
+import javax.measure.quantity.Mass;
+
 
 /**
  * User: Anakar Parida
@@ -8,10 +11,10 @@ package tec.uom.client.fitbit.model.food;
  */
 public class Serving {
     private int unitId;
-    private double servingSize;
+    private Quantity<Mass> servingSize;
     private double multiplier;
 
-    public Serving(int unitId, double servingSize, double multiplier) {
+    public Serving(int unitId, Quantity<Mass> servingSize, double multiplier) {
         this.unitId = unitId;
         this.servingSize = servingSize;
         this.multiplier = multiplier;
@@ -21,7 +24,7 @@ public class Serving {
         return unitId;
     }
 
-    public double getServingSize() {
+    public Quantity<Mass> getServingSize() {
         return servingSize;
     }
 

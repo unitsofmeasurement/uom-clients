@@ -1,6 +1,7 @@
 package tec.uom.client.fitbit.model.glucose;
 
 import javax.measure.Quantity;
+import javax.measure.quantity.Mass;
 import javax.measure.quantity.Time;
 
 
@@ -12,25 +13,26 @@ import javax.measure.quantity.Time;
  */
 public class GlucoseLog {
 
-    private final String tracker;
-    private final double glucose;
-    private final Quantity<Time> time;
+	private final String tracker;
+	private final Quantity<Mass> glucose;
+	private final Quantity<Time> time;
 
-    public GlucoseLog(String tracker, double glucose, Quantity<Time> time) {
-        this.tracker = tracker;
-        this.glucose = glucose;
-        this.time = time;
-    }
+	public GlucoseLog(String tracker, Quantity<Mass> glucose,
+			Quantity<Time> time) {
+		this.tracker = tracker;
+		this.glucose = glucose;
+		this.time = time;
+	}
 
-    public String getTracker() {
-        return tracker;
-    }
+	public String getTracker() {
+		return tracker;
+	}
 
-    public double getGlucose() {
-        return glucose;
-    }
+	public Quantity<Mass> getGlucose() {
+		return glucose;
+	}
 
-    public Quantity<Time> getTime() {
-        return time;
-    }
+	public Quantity<Time> getTime() {
+		return time;
+	}
 }

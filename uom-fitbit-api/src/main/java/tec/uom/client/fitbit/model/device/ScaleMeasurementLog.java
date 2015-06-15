@@ -4,7 +4,6 @@ import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
-import javax.measure.quantity.Time;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,11 +17,11 @@ public class ScaleMeasurementLog {
     private final Quantity<Mass> fat;
     private final Quantity<Mass> weight;
     private final DateTime date;
-    private final Quantity<Time> time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
+    private final DateTime time; // TODO is this a duration or time of day? (in that case, DateTime may handle both)
     private final String userId;
     private final String scaleUserName;
 
-    public ScaleMeasurementLog(Long logId, Quantity<Mass> fat, Quantity<Mass> weight, DateTime date, Quantity<Time> time, String userId, String scaleUserName) {
+    public ScaleMeasurementLog(Long logId, Quantity<Mass> fat, Quantity<Mass> weight, DateTime date, DateTime time, String userId, String scaleUserName) {
         this.logId = logId;
         this.fat = fat;
         this.weight = weight;
@@ -48,7 +47,7 @@ public class ScaleMeasurementLog {
         return date;
     }
 
-    public Quantity<Time> getTime() {
+    public DateTime getTime() {
         return time;
     }
 

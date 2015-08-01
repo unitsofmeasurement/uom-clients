@@ -3,8 +3,10 @@ package tec.uom.client.fitbit.jackson.food;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.Serving;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -22,9 +24,16 @@ public class ServingDeserializer extends JsonDeserializer<Serving> {
 	public Serving deserialize(JsonParser jp, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		Serving serving = new Serving(data.get("unitId").asInt(),
 				Quantities.getQuantity(data.get("servingSize").numberValue(),
-						SI.KILOGRAM), data.get("multiplier").asDouble());
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				data.get("multiplier").asDouble());
 		return serving;
 	}
 }

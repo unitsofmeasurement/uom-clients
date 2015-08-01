@@ -3,8 +3,10 @@ package tec.uom.client.fitbit.jackson.activity;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.activity.ActivityDistance;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -24,9 +26,23 @@ public class ActivityDistanceDeserializer extends
 			DeserializationContext ctxt) throws IOException,
 			JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		ActivityDistance activityDistance = new ActivityDistance(data.get(
-				"activity").asText(), Quantities.getQuantity(data.get("distance")
-				.numberValue(), SI.METRE)); // TODO this should be customizable (not just Metric)
+				"activity").asText(), Quantities.getQuantity(
+				data.get("distance").numberValue(),
+				UnitSystem.getUnitSystem(userInfo.getLocale())
+						.getDistanceUnits().getUnitRepresentation())); // TODO
+																		// this
+																		// should
+																		// be
+																		// customizable
+																		// (not
+																		// just
+																		// Metric)
 		return activityDistance;
 	}
 }

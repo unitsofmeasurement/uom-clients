@@ -5,8 +5,10 @@ import java.util.Locale;
 import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
+import javax.measure.Unit;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Mass;
+import javax.measure.quantity.Volume;
 
 import org.agorava.spi.UserProfile;
 
@@ -44,14 +46,24 @@ public class UserInfo extends UserProfile {
     private final int offsetFromUTCMillis;
     private Locale locale; // TODO could we use Java Locale here?
     private final String avatar;
+    
+    private Unit<Mass> weightUnit;
+    private Unit<Length> distanceUnit;
+    private Unit<Length> heightUnit;
+    private Unit<Volume> waterUnit;
+    private Unit<Volume> glucoseUnit;
 
-    public UserInfo(String encodedId, String displayName, Gender gender,
-    		DateTime dateOfBirth, Quantity<Length> height,
+    
+
+	public UserInfo(String encodedId, String displayName,
+			Gender gender, DateTime dateOfBirth, Quantity<Length> height,
 			Quantity<Mass> weight, Quantity<Length> strideLengthWalking,
 			Quantity<Length> strideLengthRunning, String fullName,
 			String nickname, String country, String state, String city,
-			String aboutMe, DateTime memberSince, /*TimeZone timezone,*/
-			int offsetFromUTCMillis, Locale locale, String avatar) {
+			String aboutMe, DateTime memberSince, int offsetFromUTCMillis,
+			Locale locale, String avatar, Unit<Mass> weightUnit,
+			Unit<Length> distanceUnit, Unit<Length> heightUnit,
+			Unit<Volume> waterUnit, Unit<Volume> glucoseUnit) {
 		super(encodedId);
 		this.encodedId = encodedId;
 		this.displayName = displayName;
@@ -68,10 +80,14 @@ public class UserInfo extends UserProfile {
 		this.city = city;
 		this.aboutMe = aboutMe;
 		this.memberSince = memberSince;
-		/*this.timezone = timezone;*/
 		this.offsetFromUTCMillis = offsetFromUTCMillis;
 		this.locale = locale;
 		this.avatar = avatar;
+		this.weightUnit = weightUnit;
+		this.distanceUnit = distanceUnit;
+		this.heightUnit = heightUnit;
+		this.waterUnit = waterUnit;
+		this.glucoseUnit = glucoseUnit;
 	}
 
 	public String getEncodedId() {
@@ -153,6 +169,26 @@ public class UserInfo extends UserProfile {
     public String getAvatar() {
         return avatar;
     }
+
+	public Unit<Mass> getWeightUnit() {
+		return weightUnit;
+	}
+
+	public Unit<Length> getDistanceUnit() {
+		return distanceUnit;
+	}
+
+	public Unit<Length> getHeightUnit() {
+		return heightUnit;
+	}
+
+	public Unit<Volume> getWaterUnit() {
+		return waterUnit;
+	}
+
+	public Unit<Volume> getGlucoseUnit() {
+		return glucoseUnit;
+	}
 
 	@Override
 	public String getProfileImageUrl() {

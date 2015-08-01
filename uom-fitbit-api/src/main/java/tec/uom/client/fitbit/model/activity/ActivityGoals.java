@@ -41,6 +41,17 @@ public class ActivityGoals {
 	public ActivityGoals() {
 	}
 
+	public ActivityGoals(Quantity<Energy> caloriesOut, Quantity<Step> steps,
+			Quantity<Length> distance, Quantity<Time> activeMinutes,
+			Quantity<Floor> floors) {
+		super();
+		this.caloriesOut = caloriesOut;
+		this.steps = steps;
+		this.distance = distance;
+		this.activeMinutes = activeMinutes;
+		this.floors = floors;
+	}
+
 	public Quantity<Energy> getCaloriesOut() {
 		return caloriesOut;
 	}

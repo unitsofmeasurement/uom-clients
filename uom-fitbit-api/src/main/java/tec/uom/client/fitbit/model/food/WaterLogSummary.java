@@ -1,7 +1,7 @@
 package tec.uom.client.fitbit.model.food;
 
 import javax.measure.Quantity;
-import javax.measure.quantity.Mass;
+import javax.measure.quantity.Volume;
 
 /**
  * User: Anakar Parida
@@ -10,13 +10,13 @@ import javax.measure.quantity.Mass;
  */
 public class WaterLogSummary {
 
-    private final Quantity<Mass> water;
+    private final Quantity<Volume> water;
 
-    public WaterLogSummary(Quantity<Mass> water) {
+    public WaterLogSummary(Quantity<Volume> water) {
         this.water = water;
     }
 
-    public Quantity<Mass> getWater() {
+    public Quantity<Volume> getWater() {
         return water;
     }
 }

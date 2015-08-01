@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.util.Locale;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.model.units.DistanceUnits;
+import tec.uom.client.fitbit.model.units.HeightUnits;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.units.VolumeUnits;
+import tec.uom.client.fitbit.model.units.WeightUnits;
 import tec.uom.client.fitbit.model.user.Gender;
 import tec.uom.client.fitbit.model.user.UserInfo;
 
@@ -30,17 +34,35 @@ public class UserInfoDeserializer extends JsonDeserializer<UserInfo> {
 				.get("displayName").asText(), Gender.valueOf(data.get("gender")
 				.asText()), new DateTime(data.get("dateOfBirth").asText()),
 				Quantities.getQuantity(data.get("height").numberValue(),
-						SI.METRE), Quantities.getQuantity(data.get("weight")
-						.numberValue(), SI.KILOGRAM),
+						UnitSystem.getUnitSystem(Locale.getDefault())
+								.getDistanceUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("weight").numberValue(),
+						UnitSystem.getUnitSystem(Locale.getDefault())
+								.getWeightUnits().getUnitRepresentation()),
 				Quantities.getQuantity(data.get("strideLengthWalking")
-						.numberValue(), SI.METRE), Quantities.getQuantity(data
-						.get("strideLengthRunning").numberValue(), SI.METRE),
+						.numberValue(),
+						UnitSystem.getUnitSystem(Locale.getDefault())
+								.getDistanceUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("strideLengthRunning")
+						.numberValue(),
+						UnitSystem.getUnitSystem(Locale.getDefault())
+								.getDistanceUnits().getUnitRepresentation()),
 				data.get("fullName").asText(), data.get("nickname").asText(),
 				data.get("country").asText(), data.get("state").asText(), data
 						.get("city").asText(), data.get("aboutMe").asText(),
 				new DateTime(data.get("memberSince").asText()), data.get(
 						"offsetFromUTCMillis").asInt(), new Locale(data.get(
-						"locale").asText()), data.get("avatar").asText());
+						"locale").asText()), data.get("avatar").asText(),
+				WeightUnits.valueOf((data.get("weightUnit").asText()))
+						.getUnitRepresentation(), DistanceUnits.valueOf(
+						(data.get("distanceUnit").asText()))
+						.getUnitRepresentation(), HeightUnits.valueOf(
+						(data.get("heightUnit").asText()))
+						.getUnitRepresentation(), VolumeUnits.valueOf(
+						(data.get("waterUnit").asText()))
+						.getUnitRepresentation(), VolumeUnits.valueOf(
+						(data.get("glucoseUnit").asText()))
+						.getUnitRepresentation());
 		return userInfo;
 	}
 }

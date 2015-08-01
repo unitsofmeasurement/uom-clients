@@ -5,8 +5,10 @@ import hirondelle.date4j.DateTime;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.device.ScaleMeasurementLog;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -26,13 +28,21 @@ public class ScaleMeasurementLogDeserializer extends
 			DeserializationContext ctxt) throws IOException,
 			JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		ScaleMeasurementLog scaleMeasurementLog = new ScaleMeasurementLog(data
 				.get("logId").asLong(), Quantities.getQuantity(data.get("fat")
-				.numberValue(), SI.KILOGRAM), Quantities.getQuantity(
-				data.get("weight").numberValue(), SI.KILOGRAM), new DateTime(
-				data.get("date").asText()), new DateTime(data.get("time")
-				.asText()), data.get("userId").asText(), data.get(
-				"scaleUserName").asText());
+				.numberValue(), UnitSystem.getUnitSystem(userInfo.getLocale())
+				.getWeightUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("weight").numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				new DateTime(data.get("date").asText()), new DateTime(data.get(
+						"time").asText()), data.get("userId").asText(), data
+						.get("scaleUserName").asText());
 		return scaleMeasurementLog;
 	}
 }

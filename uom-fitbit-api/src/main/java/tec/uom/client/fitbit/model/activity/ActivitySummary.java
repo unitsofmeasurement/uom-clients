@@ -53,7 +53,6 @@ public class ActivitySummary {
 			Quantity<Time> lightlyActiveMinutes,
 			Quantity<Time> fairlyActiveMinutes,
 			Quantity<Time> veryActiveMinutes, List<ActivityDistance> distances) {
-//		super();
 		this.caloriesOut = caloriesOut;
 		this.activityCalories = activityCalories;
 		this.marginalCalories = marginalCalories;

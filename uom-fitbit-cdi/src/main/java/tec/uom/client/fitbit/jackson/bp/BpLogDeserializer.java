@@ -3,8 +3,10 @@ package tec.uom.client.fitbit.jackson.bp;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.bp.BpLog;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -22,10 +24,16 @@ public class BpLogDeserializer extends JsonDeserializer<BpLog> {
 	public BpLog deserialize(JsonParser jp, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		BpLog bpLog = new BpLog(data.get("logId").asLong(), data
 				.get("systolic").asInt(), data.get("diastolic").asInt(),
 				Quantities.getQuantity(data.get("time").numberValue(),
-						SI.MINUTE));
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getDurationUnits().getUnitRepresentation()));
 		return bpLog;
 	}
 }

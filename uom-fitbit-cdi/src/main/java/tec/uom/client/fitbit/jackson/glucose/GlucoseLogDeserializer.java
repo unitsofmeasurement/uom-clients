@@ -3,8 +3,10 @@ package tec.uom.client.fitbit.jackson.glucose;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.glucose.GlucoseLog;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -22,10 +24,18 @@ public class GlucoseLogDeserializer extends JsonDeserializer<GlucoseLog> {
 	public GlucoseLog deserialize(JsonParser jp, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		GlucoseLog glucoseLog = new GlucoseLog(data.get("tracker").asText(),
 				Quantities.getQuantity(data.get("glucose").numberValue(),
-						SI.KILOGRAM), Quantities.getQuantity(data.get("time")
-						.numberValue(), SI.MINUTE));
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("time").numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getDurationUnits().getUnitRepresentation()));
 		return glucoseLog;
 	}
 }

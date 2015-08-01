@@ -20,6 +20,7 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
+import tec.uom.client.fitbit.model.user.FriendStats.StatisticInfo;
 import tec.uom.domain.health.Step;
 
 /**
@@ -103,4 +104,5 @@ public class FriendStats {
         }
 
     }
+
 }

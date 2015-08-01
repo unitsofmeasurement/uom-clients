@@ -4,7 +4,10 @@ import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
 import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.Food;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -22,12 +25,19 @@ public class FoodDeserializer extends JsonDeserializer<Food> {
 	public Food deserialize(JsonParser jp, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		Food food = new Food(data.get("foodId").asLong(), data.get("name")
 				.asText(), data.get("brand").asText(), data.get("accessLevel")
 				.asText(), Quantities.getQuantity(data.get("calories")
 				.numberValue(), SI.JOULE), Quantities.getQuantity(
-				data.get("defaultServingSize").numberValue(), SI.KILOGRAM),
-				new int[data.get("units").asInt()]);
+				data.get("defaultServingSize").numberValue(), UnitSystem
+						.getUnitSystem(userInfo.getLocale()).getWeightUnits()
+						.getUnitRepresentation()), new int[data.get("units")
+				.asInt()]);
 		return food;
 	}
 }

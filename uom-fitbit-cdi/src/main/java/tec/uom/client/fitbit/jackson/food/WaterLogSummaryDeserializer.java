@@ -3,8 +3,10 @@ package tec.uom.client.fitbit.jackson.food;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.WaterLogSummary;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -24,9 +26,15 @@ public class WaterLogSummaryDeserializer extends
 			DeserializationContext ctxt) throws IOException,
 			JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		WaterLogSummary waterLogSummary = new WaterLogSummary(
 				Quantities.getQuantity(data.get("water").numberValue(),
-						SI.KILOGRAM));
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getVolumeUnits().getUnitRepresentation()));
 		return waterLogSummary;
 	}
 }

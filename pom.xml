@@ -73,6 +73,11 @@
 				<version>${ri.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>tec.uom</groupId>
+				<artifactId>uom-se</artifactId>
+				<version>${lib.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>tec.uom.lib</groupId>
 				<artifactId>uom-lib-common</artifactId>
 				<version>${lib.version}</version>

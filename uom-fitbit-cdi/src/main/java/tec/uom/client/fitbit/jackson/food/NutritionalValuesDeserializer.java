@@ -4,7 +4,10 @@ import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
 import tec.units.ri.spi.SI;
+import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.NutritionalValues;
+import tec.uom.client.fitbit.model.units.UnitSystem;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -24,15 +27,29 @@ public class NutritionalValuesDeserializer extends
 			DeserializationContext ctxt) throws IOException,
 			JsonProcessingException {
 		JsonNode data = jp.readValueAsTree();
+		UserInfo userInfo = null;
+		if (data.has("user")) {
+			UserInfoDeserializer userInfoDeserializer = new UserInfoDeserializer();
+			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
+		}
 		NutritionalValues nutritionalValues = new NutritionalValues(
 				Quantities.getQuantity(data.get("calories").numberValue(),
 						SI.JOULE), Quantities.getQuantity(data.get("fat")
-						.numberValue(), SI.KILOGRAM), Quantities.getQuantity(
-						data.get("fiber").numberValue(), SI.KILOGRAM),
+						.numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("fiber").numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
 				Quantities.getQuantity(data.get("carbs").numberValue(),
-						SI.KILOGRAM), Quantities.getQuantity(data.get("sodium")
-						.numberValue(), SI.KILOGRAM), Quantities.getQuantity(
-						data.get("protein").numberValue(), SI.KILOGRAM));
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("sodium").numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()),
+				Quantities.getQuantity(data.get("protein").numberValue(),
+						UnitSystem.getUnitSystem(userInfo.getLocale())
+								.getWeightUnits().getUnitRepresentation()));
 		return nutritionalValues;
 	}
 }

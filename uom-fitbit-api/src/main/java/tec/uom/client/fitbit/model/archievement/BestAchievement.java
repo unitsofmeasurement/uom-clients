@@ -16,10 +16,10 @@
 
 package tec.uom.client.fitbit.model.archievement;
 
+import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
-import tec.units.ri.Measurement;
 import tec.uom.domain.health.Floor;
 import tec.uom.domain.health.Step;
 
@@ -29,14 +29,14 @@ import tec.uom.domain.health.Step;
  */
 public class BestAchievement {
 
-	private Measurement<Energy> caloriesOut;
-	private Measurement<Floor> floors;
-	private Measurement<Length> distance;
-	private Measurement<Step> steps;
+	private Quantity<Energy> caloriesOut;
+	private Quantity<Floor> floors;
+	private Quantity<Length> distance;
+	private Quantity<Step> steps;
 
-	public BestAchievement(Measurement<Energy> caloriesOut,
-			Measurement<Floor> floors, Measurement<Length> distance,
-			Measurement<Step> steps) {
+	public BestAchievement(Quantity<Energy> caloriesOut,
+			Quantity<Floor> floors, Quantity<Length> distance,
+			Quantity<Step> steps) {
 		this.caloriesOut = caloriesOut;
 		this.floors = floors;
 		this.distance = distance;
@@ -75,19 +75,19 @@ public class BestAchievement {
 //		}
 //	}
 
-	public Measurement<Energy> getCaloriesOut() {
+	public Quantity<Energy> getCaloriesOut() {
 		return caloriesOut;
 	}
 
-	public Measurement<Floor> getFloors() {
+	public Quantity<Floor> getFloors() {
 		return floors;
 	}
 
-	public Measurement<Length> getDistance() {
+	public Quantity<Length> getDistance() {
 		return distance;
 	}
 
-	public Measurement<Step> getSteps() {
+	public Quantity<Step> getSteps() {
 		return steps;
 	}
 }

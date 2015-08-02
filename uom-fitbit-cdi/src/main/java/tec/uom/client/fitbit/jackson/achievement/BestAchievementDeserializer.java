@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.achievement;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.archievement.BestAchievement;
 import tec.uom.client.fitbit.model.units.UnitSystem;
@@ -38,7 +38,7 @@ public class BestAchievementDeserializer extends
 		}
 		BestAchievement bestAchievement = new BestAchievement(
 				Quantities.getQuantity(data.get("caloriesOut").numberValue(),
-						SI.JOULE), Quantities.getQuantity(data.get("floors")
+						Units.JOULE), Quantities.getQuantity(data.get("floors")
 						.numberValue(),
 						Health.getInstance().getUnit(Floor.class)),
 				Quantities.getQuantity(data.get("distance").numberValue(),

@@ -1,15 +1,17 @@
 package tec.uom.client.fitbit.model.units;
 
+import static tec.units.ri.unit.Units.*;
+
 import javax.measure.Unit;
 import javax.measure.quantity.Mass;
 
-import tec.units.ri.spi.SI;
-import tec.uom.se.util.UCUM;
+import systems.uom.common.Imperial;
+import systems.uom.common.US;
 
 public enum WeightUnits {
-    KG(SI.KILOGRAM),
-    POUNDS(UCUM.POUND),
-    STONE(UCUM.STONE);
+    KG(KILOGRAM),
+    POUNDS(US.POUND),
+    STONE(Imperial.STONE);
 
     Unit<Mass> unitRepresentation;
 

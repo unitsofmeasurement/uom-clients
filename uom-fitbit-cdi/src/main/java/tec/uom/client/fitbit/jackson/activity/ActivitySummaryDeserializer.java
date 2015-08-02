@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.deserializer.ListDeserializer;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.activity.ActivityDistance;
@@ -46,10 +46,10 @@ public class ActivitySummaryDeserializer extends
 		}
 		ActivitySummary activitySummary = new ActivitySummary(
 				Quantities.getQuantity(data.get("caloriesOut").numberValue(),
-						SI.JOULE), Quantities.getQuantity(
-						data.get("activityCalories").numberValue(), SI.JOULE),
+						Units.JOULE), Quantities.getQuantity(
+						data.get("activityCalories").numberValue(), Units.JOULE),
 				Quantities.getQuantity(data.get("marginalCalories")
-						.numberValue(), SI.JOULE), Quantities.getQuantity(data
+						.numberValue(), Units.JOULE), Quantities.getQuantity(data
 						.get("steps").numberValue(), Health.getInstance()
 						.getUnit(Step.class)), Quantities.getQuantity(
 						data.get("floors").numberValue(), Health.getInstance()

@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.food;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.NutritionalValuesEntry;
 import tec.uom.client.fitbit.model.units.UnitSystem;
@@ -34,8 +34,8 @@ public class NutritionalValuesEntryDeserializer extends
 		}
 		NutritionalValuesEntry nutritionalValuesEntry = new NutritionalValuesEntry(
 				Quantities.getQuantity(data.get("calories").numberValue(),
-						SI.JOULE), Quantities.getQuantity(
-						data.get("caloriesFromFat").numberValue(), SI.JOULE),
+						Units.JOULE), Quantities.getQuantity(
+						data.get("caloriesFromFat").numberValue(), Units.JOULE),
 				Quantities.getQuantity(data.get("totalFat").numberValue(),
 						UnitSystem.getUnitSystem(userInfo.getLocale())
 								.getWeightUnits().getUnitRepresentation()),

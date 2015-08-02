@@ -3,14 +3,14 @@ package tec.uom.client.fitbit.model.units;
 import javax.measure.Unit;
 import javax.measure.quantity.Volume;
 
-import tec.units.ri.spi.SI;
-import tec.uom.se.util.SIPrefix;
-import tec.uom.se.util.UCUM;
+import tec.units.ri.unit.Units;
+import tec.units.ri.unit.MetricPrefix;
+import systems.uom.common.US;
 
 public enum VolumeUnits {
-    ML(SIPrefix.MILLI(SI.LITRE)),
-    FL_OZ(UCUM.FLUID_OUNCE_US),
-    CUP(UCUM.CUP_US);
+    ML(MetricPrefix.MILLI(Units.LITRE)),
+    FL_OZ(US.FLUID_OUNCE),
+    CUP(US.CUP);
 
     Unit<Volume> unitRepresentation;
 

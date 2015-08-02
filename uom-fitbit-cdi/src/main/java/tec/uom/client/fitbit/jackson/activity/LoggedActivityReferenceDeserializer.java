@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.activity;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.activity.ActivityReference;
 import tec.uom.client.fitbit.model.activity.LoggedActivityReference;
@@ -49,7 +49,7 @@ public class LoggedActivityReferenceDeserializer extends
 					activityReference.getActivityParentId(),
 					activityReference.getActivityParentName(),
 					Quantities.getQuantity(data.get("calories").numberValue(),
-							SI.JOULE),
+							Units.JOULE),
 					Quantities
 							.getQuantity(
 									data.get("duration").numberValue(),

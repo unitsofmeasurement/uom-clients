@@ -1,15 +1,16 @@
 package tec.uom.client.fitbit.model.units;
 
+import static systems.uom.common.US.MILE;
+
 import javax.measure.Unit;
 import javax.measure.quantity.Length;
 
-import tec.uom.se.util.SI;
-import tec.uom.se.util.SIPrefix;
-import tec.uom.se.util.UCUM;
+import tec.units.ri.unit.Units;
+import tec.units.ri.unit.MetricPrefix;
 
 public enum DistanceUnits {
-    METRIC(SIPrefix.KILO(SI.METRE)),
-    US(UCUM.MILE_US_SURVEY);
+    METRIC(MetricPrefix.KILO(Units.METRE)),
+    US(MILE);
 
     Unit<Length> unitRepresentation;
 

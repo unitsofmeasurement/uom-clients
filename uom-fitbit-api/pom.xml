@@ -27,8 +27,8 @@
 			<artifactId>unit-ri</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>tec.uom</groupId>
-			<artifactId>uom-se</artifactId>
+			<groupId>systems.uom</groupId>
+			<artifactId>uom-systems-common</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>tec.uom.lib</groupId>

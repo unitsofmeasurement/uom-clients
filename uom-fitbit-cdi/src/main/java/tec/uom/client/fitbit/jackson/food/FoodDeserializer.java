@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.food;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.Food;
 import tec.uom.client.fitbit.model.units.UnitSystem;
@@ -33,7 +33,7 @@ public class FoodDeserializer extends JsonDeserializer<Food> {
 		Food food = new Food(data.get("foodId").asLong(), data.get("name")
 				.asText(), data.get("brand").asText(), data.get("accessLevel")
 				.asText(), Quantities.getQuantity(data.get("calories")
-				.numberValue(), SI.JOULE), Quantities.getQuantity(
+				.numberValue(), Units.JOULE), Quantities.getQuantity(
 				data.get("defaultServingSize").numberValue(), UnitSystem
 						.getUnitSystem(userInfo.getLocale()).getWeightUnits()
 						.getUnitRepresentation()), new int[data.get("units")

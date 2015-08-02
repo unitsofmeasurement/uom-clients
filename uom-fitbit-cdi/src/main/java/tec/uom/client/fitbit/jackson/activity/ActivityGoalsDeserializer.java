@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.activity;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.activity.ActivityGoals;
 import tec.uom.client.fitbit.model.units.UnitSystem;
@@ -35,7 +35,7 @@ public class ActivityGoalsDeserializer extends JsonDeserializer<ActivityGoals> {
 			userInfo = userInfoDeserializer.deserialize(jp, ctxt);
 		}
 		ActivityGoals activityGoals = new ActivityGoals(Quantities.getQuantity(
-				data.get("caloriesOut").numberValue(), SI.JOULE),
+				data.get("caloriesOut").numberValue(), Units.JOULE),
 				Quantities.getQuantity(data.get("steps").numberValue(), Health
 						.getInstance().getUnit(Step.class)),
 				Quantities.getQuantity(data.get("distance").numberValue(),

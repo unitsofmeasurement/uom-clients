@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.user;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.model.units.UnitSystem;
 import tec.uom.client.fitbit.model.user.FriendStats;
 import tec.uom.client.fitbit.model.user.UserInfo;
@@ -39,7 +39,7 @@ public class FriendStatsDeserializer extends JsonDeserializer<FriendStats> {
 							.numberValue(),
 							Health.getInstance().getUnit(Step.class)),
 					Quantities.getQuantity(data.get("summary").get("calories")
-							.numberValue(), SI.JOULE),
+							.numberValue(), Units.JOULE),
 					Quantities.getQuantity(data.get("summary").get("distance")
 							.numberValue(),
 							UnitSystem.getUnitSystem(userInfo.getLocale())
@@ -51,7 +51,7 @@ public class FriendStatsDeserializer extends JsonDeserializer<FriendStats> {
 							.numberValue(),
 							Health.getInstance().getUnit(Step.class)),
 					Quantities.getQuantity(data.get("average").get("calories")
-							.numberValue(), SI.JOULE),
+							.numberValue(), Units.JOULE),
 					Quantities.getQuantity(data.get("average").get("distance")
 							.numberValue(),
 							UnitSystem.getUnitSystem(userInfo.getLocale())

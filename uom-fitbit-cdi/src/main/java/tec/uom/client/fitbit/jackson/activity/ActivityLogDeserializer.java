@@ -5,7 +5,7 @@ import hirondelle.date4j.DateTime;
 import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
-import tec.units.ri.spi.SI;
+import tec.units.ri.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.activity.ActivityLog;
 import tec.uom.client.fitbit.model.units.UnitSystem;
@@ -47,7 +47,7 @@ public class ActivityLogDeserializer extends JsonDeserializer<ActivityLog> {
 						UnitSystem.getUnitSystem(userInfo.getLocale())
 								.getDistanceUnits().getUnitRepresentation()),
 				Quantities.getQuantity(data.get("calories").numberValue(),
-						SI.JOULE), Quantities.getQuantity(data.get("steps")
+						Units.JOULE), Quantities.getQuantity(data.get("steps")
 						.numberValue(), Health.getInstance()
 						.getUnit(Step.class)), data.get("isFavorite")
 						.asBoolean());

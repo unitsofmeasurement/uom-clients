@@ -1,14 +1,15 @@
 package tec.uom.client.fitbit.model.units;
 
+import static tec.units.ri.unit.Units.*;
+
 import javax.measure.Unit;
 import javax.measure.quantity.Time;
 
-import tec.uom.se.util.SI;
-import tec.uom.se.util.SIPrefix;
+import tec.units.ri.unit.MetricPrefix;
 
 public enum DurationUnits {
-    MS(SIPrefix.MILLI(SI.SECOND)),
-    MIN(SI.MINUTE);
+    MS(MetricPrefix.MILLI(SECOND)),
+    MIN(MINUTE);
     
     Unit<Time> unitRepresentation;
 

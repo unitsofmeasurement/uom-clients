@@ -16,6 +16,7 @@
         <dependency>
             <groupId>tec.uom.client</groupId>
             <artifactId>uom-fitbit-api</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

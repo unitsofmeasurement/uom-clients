@@ -80,7 +80,7 @@
 			</dependency>
 			<dependency>
                 <groupId>systems.uom</groupId>
-                <artifactId>uom-systems-common</artifactId>
+                <artifactId>systems-common</artifactId>
                 <version>${systems.version}</version>
             </dependency>
 			<dependency>

@@ -31,9 +31,9 @@
 		<project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-		<ri.version>0.8-RC3</ri.version>
-		<lib.version>0.7-SNAPSHOT</lib.version>
-		<systems.version>0.1-SNAPSHOT</systems.version>
+		<ri.version>0.8</ri.version>
+		<lib.version>0.8</lib.version>
+		<systems.version>0.2</systems.version>
 		<agorava.version>0.7.0</agorava.version>
 	</properties>
 
@@ -90,7 +90,7 @@
 			</dependency>
 			<dependency>
 				<groupId>tec.uom.domain</groupId>
-				<artifactId>uom-health-ri</artifactId>
+				<artifactId>uom-health</artifactId>
 				<version>${lib.version}</version>
 			</dependency>
 			<dependency>

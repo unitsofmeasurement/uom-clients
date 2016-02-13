@@ -40,7 +40,7 @@
 		</dependency>
 		<dependency>
 			<groupId>tec.uom.domain</groupId>
-			<artifactId>uom-health-ri</artifactId>
+			<artifactId>uom-health</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.darwinsys</groupId>

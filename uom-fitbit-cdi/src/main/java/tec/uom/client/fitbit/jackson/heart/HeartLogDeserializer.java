@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Units of Measurement
+ * Copyright 2015-2016 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import java.io.IOException;
 
 import tec.units.ri.quantity.Quantities;
 import tec.uom.client.fitbit.model.heart.HeartLog;
-import tec.uom.domain.health.ri.Health;
+import tec.uom.domain.health.unit.Health;
 
 /**
  * User: Werner

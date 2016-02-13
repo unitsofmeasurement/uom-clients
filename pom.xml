@@ -14,7 +14,7 @@
 	<parent>
 		<artifactId>uom-parent</artifactId>
 		<groupId>tec.uom</groupId>
-		<version>0.8-RC2</version>
+		<version>0.9-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>

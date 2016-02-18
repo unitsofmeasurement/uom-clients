@@ -44,8 +44,8 @@
 		<tag>HEAD</tag>
 	</scm>
 	<modules>
-		<module>uom-fitbit-api</module> <!--  
-		<module>uom-fitbit-cdi</module> -->
+		<module>uom-fitbit-api</module>  
+		<module>uom-fitbit-cdi</module>
 	</modules>
 	<name>Units of Measurement Client for Fitbit </name>
 	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>

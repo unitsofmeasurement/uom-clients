@@ -44,8 +44,8 @@
 		<tag>HEAD</tag>
 	</scm>
 	<modules>
-		<module>uom-fitbit-api</module>
-		<module>uom-fitbit-cdi</module>
+		<module>uom-fitbit-api</module> <!--  
+		<module>uom-fitbit-cdi</module> -->
 	</modules>
 	<name>Units of Measurement Client for Fitbit </name>
 	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>
@@ -111,6 +111,23 @@
 		</dependencies>
 	</dependencyManagement>
 	
+	<distributionManagement>
+        <repository>
+            <id>bintray-release</id>
+            <name>oss-jfrog-artifactory-release</name>
+            <url>https://oss.jfrog.org/artifactory/oss-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>bintray-snapshot</id>
+            <name>oss-jfrog-artifactory-snapshot</name>
+            <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+        </snapshotRepository>
+        <site><!-- TODO do we still need that? -->
+            <id>www.unitsofmeasurement.org</id>
+            <url>scp://www.unitsofmeasurement.org/www/docs/lib/</url>
+        </site>
+    </distributionManagement>
+    
     <!-- Additional repositories -->
     <!-- Helps to resolve Parent POM and Snapshot artifacts -->
     <repositories>

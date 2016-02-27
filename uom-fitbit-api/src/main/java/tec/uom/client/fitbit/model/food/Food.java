@@ -1,3 +1,19 @@
+/*
+ * Copyright 2016 Units of Measurement
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package tec.uom.client.fitbit.model.food;
 
 import java.util.List;
@@ -6,11 +22,14 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Mass;
 
-import tec.units.ri.function.Nameable;
+import tec.uom.lib.common.function.Nameable;
+
 /**
  * User: Anakar Parida
  * Date: May 6, 2015
  * Time: 2:53:29 PM
+ * User: Werner Keil
+ * Date: February 27, 2016
  */
 public class Food implements Nameable {
     private final long foodId;

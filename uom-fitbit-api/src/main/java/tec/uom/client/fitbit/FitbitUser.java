@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Units of Measurement
+ * Copyright 2016 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,8 @@ package tec.uom.client.fitbit;
 
 import org.agorava.spi.UserProfile;
 
+import tec.uom.client.fitbit.Fitbit;
+
 public class FitbitUser extends UserProfile {
 
 	/**
@@ -28,7 +30,7 @@ public class FitbitUser extends UserProfile {
 	public static final FitbitUser CURRENT_AUTHORIZED_USER = new FitbitUser("-");
 	
 	protected FitbitUser(String id) {
-		super(id);
+		super(id, Fitbit.class);
 	}
 
 	@Override
@@ -39,5 +41,28 @@ public class FitbitUser extends UserProfile {
 	@Override
 	public String getProfileImageUrl() {
 		return null;
+	}
+
+	@Override
+	public String getEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getLastName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getLoginName() {
+		return getId();
 	}	
 }

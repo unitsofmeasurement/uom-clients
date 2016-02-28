@@ -24,13 +24,16 @@ import org.agorava.api.service.OAuthEncoder;
 import org.agorava.api.service.Preconditions;
 import org.agorava.spi.ProviderConfigOauth20Final;
 
+import tec.uom.client.fitbit.model.Scope;
+import tec.uom.lib.common.function.Versioned;
+
 /**
  * @author Werner Keil Date: 27/05/15 Time: 20:35
  */
 @Fitbit
 public class FitbitApi extends ProviderConfigOauth20Final {
 
-	public static enum Version {
+	public static enum Version implements Versioned {
 
 		BETA_1;
 
@@ -50,7 +53,7 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 	}
 
 	private static final String DEFAULT_API_BASE_URL = "api.fitbit.com";
-	private static final String DEFAULT_WEB_BASE_URL = "https://www.fitbit.com";
+//	private static final String DEFAULT_WEB_BASE_URL = "https://www.fitbit.com";
 	protected static final String SUBSCRIBER_ID_HEADER_NAME = "X-Fitbit-Subscriber-Id";
 
 	private SimpleDateFormat format = new SimpleDateFormat(
@@ -84,9 +87,11 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 					OAuthEncoder.encode(oAuthAppSettings.getCallback()),
 					OAuthEncoder.encode(oAuthAppSettings.getScope()));
 		} else {
-			System.out.println("No Scope");
-			return String.format(AUTHORIZE_URL, oAuthAppSettings.getApiKey(),
-					OAuthEncoder.encode(oAuthAppSettings.getCallback()));
+			System.out.println("No Scope, substituting " + Scope.PROFILE);
+			return String.format(SCOPED_AUTHORIZE_URL,
+					oAuthAppSettings.getApiKey(),
+					OAuthEncoder.encode(oAuthAppSettings.getCallback()),
+					Scope.PROFILE.getId());
 		}
 	}
 

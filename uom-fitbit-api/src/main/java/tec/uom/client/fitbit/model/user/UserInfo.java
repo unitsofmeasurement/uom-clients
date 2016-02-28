@@ -70,9 +70,7 @@ public class UserInfo extends UserProfile {
     private Unit<Length> heightUnit;
     private Unit<Volume> waterUnit;
     private Unit<Volume> glucoseUnit;
-
     
-
 	public UserInfo(String encodedId, String displayName,
 			Gender gender, DateTime dateOfBirth, Quantity<Length> height,
 			Quantity<Mass> weight, Quantity<Length> strideLengthWalking,

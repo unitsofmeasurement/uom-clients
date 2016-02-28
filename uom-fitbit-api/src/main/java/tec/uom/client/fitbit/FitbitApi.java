@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Units of Measurement
+ * Copyright 2015-2016 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -67,7 +67,7 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 	@Override
 	public String getAccessTokenEndpoint() {
 		//return "https://" + apiBaseUrl + "/oauth/request_token";
-		return "https://api.fitbit.com/oauth/access_token";
+		return "https:// " + DEFAULT_API_BASE_URL + "/oauth/access_token";
 	}
 
 	@Override

@@ -17,8 +17,8 @@ package tec.uom.client.fitbit.impl;
 
 import tec.uom.client.fitbit.Fitbit;
 import tec.uom.client.fitbit.FitbitBaseService;
-import tec.uom.client.fitbit.FitbitUser;
 import tec.uom.client.fitbit.FitbitUserService;
+import tec.uom.client.fitbit.model.user.UserInfo;
 
 /**
  *
@@ -29,8 +29,8 @@ import tec.uom.client.fitbit.FitbitUserService;
 public class FitbitUserServiceImpl extends FitbitBaseService implements FitbitUserService {
 
     @Override
-    public FitbitUser getUserProfile() {
-        return getService().get(buildAbsoluteUri("user"), FitbitUser.class);
+    public UserInfo getUserProfile() {
+        return getService().get(buildAbsoluteUri("user"), UserInfo.class);
     }
 
 //    @Override

@@ -16,23 +16,19 @@
 
 package tec.uom.client.fitbit;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-
 import org.agorava.api.oauth.application.OAuthAppSettings;
 import org.agorava.api.service.OAuthEncoder;
 import org.agorava.api.service.Preconditions;
-import org.agorava.spi.ProviderConfigOauth20Final;
-
+import org.agorava.spi.ProviderConfigOauth20;
 import tec.uom.client.fitbit.model.Scope;
-import tec.uom.lib.common.function.Versioned;
 
 /**
  * @author Werner Keil Date: 27/05/15 Time: 20:35
  */
 @Fitbit
-public class FitbitApi extends ProviderConfigOauth20Final {
+public class FitbitApi extends ProviderConfigOauth20 {
 
+/*
 	public static enum Version implements Versioned {
 
 		BETA_1;
@@ -51,15 +47,15 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 			return Version.valueOf("BETA_" + v);
 		}
 	}
-
+*/
 	private static final String DEFAULT_API_BASE_URL = "api.fitbit.com";
 //	private static final String DEFAULT_WEB_BASE_URL = "https://www.fitbit.com";
 	protected static final String SUBSCRIBER_ID_HEADER_NAME = "X-Fitbit-Subscriber-Id";
 
-	private SimpleDateFormat format = new SimpleDateFormat(
-			"EEE, d MMM yyyy HH:mm:ss z", Locale.ENGLISH);
-	private String apiBaseUrl = DEFAULT_API_BASE_URL;
-	private Version apiVersion = Version.BETA_1;
+//	private SimpleDateFormat format = new SimpleDateFormat(
+//			"EEE, d MMM yyyy HH:mm:ss z", Locale.ENGLISH);
+//	private String apiBaseUrl = DEFAULT_API_BASE_URL;
+//	private Version apiVersion = Version.BETA_1;
 
 	private static final String MEDIA_NAME = "Fitbit";
 	//private static final String AUTHORIZE_URL = "https://instagram.com/oauth/authorize/?client_id=%s&redirect_uri=%s&response_type=token";

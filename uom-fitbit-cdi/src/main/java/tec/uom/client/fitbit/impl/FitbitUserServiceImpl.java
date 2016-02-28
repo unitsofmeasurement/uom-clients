@@ -30,11 +30,11 @@ public class FitbitUserServiceImpl extends FitbitBaseService implements FitbitUs
 
     @Override
     public UserInfo getUserProfile() {
-        return getService().get(buildAbsoluteUri("user"), UserInfo.class);
+        return getService().get(buildAbsoluteUri("1/user/-/profile.json"), UserInfo.class);
     }
 
-//    @Override
-//    public GitHubProfile getUserProfile(String login) {
-//        return getService().get(buildAbsoluteUri("users/" + login), GitHubProfile.class);
-//    }
+    @Override
+    public UserInfo getUserProfile(String login) {
+        return getService().get(buildAbsoluteUri("1/user/" + login + "/profile.json"), UserInfo.class);
+    }
 }

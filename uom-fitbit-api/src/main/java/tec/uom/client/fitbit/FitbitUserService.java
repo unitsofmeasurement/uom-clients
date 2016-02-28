@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2015 Units of Measurement
+ * Copyright 2014-2016 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,16 @@ package tec.uom.client.fitbit;
 
 import org.agorava.spi.UserProfileService;
 
-public interface FitbitUserService extends UserProfileService {
+import tec.uom.client.fitbit.model.user.UserInfo;
 
+public interface FitbitUserService extends UserProfileService {
+	
+    /**
+     * Retrieves the profile for the specified user.
+     *
+     * @param login the Fitbit login to retrieve profile data for.
+     * @return the user's profile information.
+     * @throws AgoravaException if there is an error while communicating with Fitbit.
+     */
+    UserInfo getUserProfile(String login);
 }

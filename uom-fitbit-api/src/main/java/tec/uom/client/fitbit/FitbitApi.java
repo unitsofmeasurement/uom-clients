@@ -60,21 +60,21 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 
 	private static final String MEDIA_NAME = "Fitbit";
 	//private static final String AUTHORIZE_URL = "https://instagram.com/oauth/authorize/?client_id=%s&redirect_uri=%s&response_type=token";
-	private static final String AUTHORIZE_URL = "https://www.fitbit.com/oauth/authorize";
+	private static final String AUTHORIZE_URL = "https://www.fitbit.com/oauth2/authorize";
 	private static final String SCOPED_AUTHORIZE_URL = AUTHORIZE_URL
 			+ "&scope=%s";
 
 	@Override
 	public String getAccessTokenEndpoint() {
 		//return "https://" + apiBaseUrl + "/oauth/request_token";
-		return "https:// " + DEFAULT_API_BASE_URL + "/oauth/access_token";
+		return "https:// " + DEFAULT_API_BASE_URL + "/oauth2/token";
 	}
 
 	@Override
 	public String getAuthorizationUrl(OAuthAppSettings oAuthAppSettings) {
 		Preconditions
 				.checkValidUrl(oAuthAppSettings.getCallback(),
-						"Must provide a valid url as callback. Instagram does not support OOB");
+						"Must provide a valid url as callback. Fitbit does not support OOB");
 
 		// Append scope if present
 		/* if (oAuthAppSettings.hasScope()) {

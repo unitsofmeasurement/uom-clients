@@ -77,15 +77,17 @@ public class FitbitApi extends ProviderConfigOauth20Final {
 						"Must provide a valid url as callback. Fitbit does not support OOB");
 
 		// Append scope if present
-		/* if (oAuthAppSettings.hasScope()) {
+		if (oAuthAppSettings.hasScope()) {
+			System.out.println("Has Scope: " + oAuthAppSettings.getScope());
 			return String.format(SCOPED_AUTHORIZE_URL,
 					oAuthAppSettings.getApiKey(),
 					OAuthEncoder.encode(oAuthAppSettings.getCallback()),
 					OAuthEncoder.encode(oAuthAppSettings.getScope()));
-		} else { */
+		} else {
+			System.out.println("No Scope");
 			return String.format(AUTHORIZE_URL, oAuthAppSettings.getApiKey(),
 					OAuthEncoder.encode(oAuthAppSettings.getCallback()));
-		//}
+		}
 	}
 
 	@Override

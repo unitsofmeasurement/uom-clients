@@ -1,11 +1,11 @@
 /*
- * Copyright 2014-2016 Units of Measurement
+ * Copyright 2016 Agorava
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,8 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/**
- * @author Werner
- *
- */
 package tec.uom.client.fitbit;
+
+import javax.enterprise.util.AnnotationLiteral;
+
+/**
+ * @author Werner Keil
+ * 
+ */
+public class FitbitLiteral extends AnnotationLiteral<Fitbit> implements Fitbit {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6977339259693986899L;
+	public static Fitbit INSTANCE = new FitbitLiteral();
+
+}

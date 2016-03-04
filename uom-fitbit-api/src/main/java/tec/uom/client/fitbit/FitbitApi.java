@@ -23,7 +23,7 @@ import org.agorava.spi.ProviderConfigOauth20;
 import tec.uom.client.fitbit.model.Scope;
 
 /**
- * @author Werner Keil Date: 27/05/15 Time: 20:35
+ * @author Werner Keil Date: 04/03/16
  */
 @Fitbit
 public class FitbitApi extends ProviderConfigOauth20 {
@@ -48,8 +48,9 @@ public class FitbitApi extends ProviderConfigOauth20 {
 		}
 	}
 */
-	private static final String DEFAULT_API_BASE_URL = "api.fitbit.com";
-//	private static final String DEFAULT_WEB_BASE_URL = "https://www.fitbit.com";
+	//	private static final String DEFAULT_API_BASE_URL = "api.fitbit.com";
+	private static final String DEFAULT_WEB_BASE_URL = "https://www.fitbit.com";
+//	https://www.fitbit.com/oauth2
 	protected static final String SUBSCRIBER_ID_HEADER_NAME = "X-Fitbit-Subscriber-Id";
 
 //	private SimpleDateFormat format = new SimpleDateFormat(
@@ -58,15 +59,14 @@ public class FitbitApi extends ProviderConfigOauth20 {
 //	private Version apiVersion = Version.BETA_1;
 
 	private static final String MEDIA_NAME = "Fitbit";
-	//private static final String AUTHORIZE_URL = "https://instagram.com/oauth/authorize/?client_id=%s&redirect_uri=%s&response_type=token";
-	private static final String AUTHORIZE_URL = "https://www.fitbit.com/oauth2/authorize?client_id=%s&redirect_uri=%s&response_type=token";
+	private static final String AUTHORIZE_URL = DEFAULT_WEB_BASE_URL +"/oauth2/authorize?client_id=%s&redirect_uri=%s&response_type=token";
 	private static final String SCOPED_AUTHORIZE_URL = AUTHORIZE_URL
 			+ "&scope=%s";
 
 	@Override
 	public String getAccessTokenEndpoint() {
 		//return "https://" + apiBaseUrl + "/oauth/request_token";
-		return "https:// " + DEFAULT_API_BASE_URL + "/oauth2/token";
+		return DEFAULT_WEB_BASE_URL + "/oauth2/token";
 	}
 
 	@Override

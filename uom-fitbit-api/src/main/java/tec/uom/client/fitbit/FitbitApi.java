@@ -19,14 +19,15 @@ package tec.uom.client.fitbit;
 import org.agorava.api.oauth.application.OAuthAppSettings;
 import org.agorava.api.service.OAuthEncoder;
 import org.agorava.api.service.Preconditions;
-import org.agorava.spi.ProviderConfigOauth20;
+import org.agorava.spi.ProviderConfigOauth20Final;
+
 import tec.uom.client.fitbit.model.Scope;
 
 /**
  * @author Werner Keil Date: 04/03/16
  */
 @Fitbit
-public class FitbitApi extends ProviderConfigOauth20 {
+public class FitbitApi extends ProviderConfigOauth20Final {
 
 /*
 	public static enum Version implements Versioned {

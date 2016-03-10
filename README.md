@@ -3,6 +3,8 @@ uom-clients
 
 Units of Measurement Clients
 
+[![Circle CI](https://circleci.com/gh/unitsofmeasurement/uom-clients.svg?style=svg)](https://circleci.com/gh/unitsofmeasurement/uom-clients) 
+
 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://maven.org/)
 
 Waffle.io

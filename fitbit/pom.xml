@@ -12,13 +12,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
-		<artifactId>uom-parent</artifactId>
-		<groupId>tec.uom</groupId>
-		<version>0.9-SNAPSHOT</version>
+		<artifactId>uom-clients</artifactId>
+		<groupId>tec.uom.client</groupId>
+		<version>0.1-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>tec.uom.client</groupId>
 	<version>0.4-SNAPSHOT</version>
 	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>

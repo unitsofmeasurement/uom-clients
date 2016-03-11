@@ -15,7 +15,8 @@
 	<version>0.1-SNAPSHOT</version>
 	<artifactId>uom-clients</artifactId>
 	<packaging>pom</packaging>
-
+    <inceptionYear>2014</inceptionYear>
+    
 	<scm>
 		<connection>scm:git:git://github.com/unitsofmeasurement/uom-fitbit</connection>
 		<developerConnection>scm:git:git@github.com:unitsofmeasurement/uom-fitbit.git</developerConnection>
@@ -24,6 +25,7 @@
 	</scm>
 	<modules>
 		<module>fitbit</module>  
+		<module>strava</module>  
 	</modules>
 	<name>Units of Measurement Clients</name>
 	<description>Units of Measurement Client Libraries</description>
@@ -62,5 +64,4 @@
             <url>http://jcenter.bintray.com</url>
         </repository>
     </repositories>
-    <inceptionYear>2014</inceptionYear>
 </project>

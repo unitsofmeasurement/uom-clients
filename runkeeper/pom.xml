@@ -26,19 +26,13 @@
 	<!-- Build Settings -->
 	<!-- ======================================================= -->
 	<properties>
-		<jdkVersion>1.7</jdkVersion>
-		<project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
-		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
-		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-		<ri.version>0.9-SNAPSHOT</ri.version>
-		<lib.version>0.9-SNAPSHOT</lib.version>
 		<systems.version>0.3-SNAPSHOT</systems.version>
 		<agorava.version>0.7.1-SNAPSHOT</agorava.version>
 	</properties>
 
 	<modules>
-		<module>uom-runkeeper-api</module> <!--  
-		<module>uom-runkeeper-cdi</module> -->
+		<module>uom-runkeeper-api</module>  
+		<module>uom-runkeeper-cdi</module>
 	</modules>
 	<name>Units of Measurement Client for RunKeeper</name>
 	<description>RunKeeper Client for Units of Measurement Health and Fitness Libraries</description>

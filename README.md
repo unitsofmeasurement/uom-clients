@@ -7,6 +7,10 @@ Units of Measurement Clients
 
 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://maven.org/)
 
+The project currently contains the following clients:
+- [Fitbit](fitbit)
+- [Strava](strava)
+
 Waffle.io
 ------------
 [![Stories in Ready](https://badge.waffle.io/unitsofmeasurement/uom-clients.png?label=ready&title=Ready)](https://waffle.io/unitsofmeasurement/uom-clients)

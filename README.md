@@ -7,6 +7,7 @@ Units of Measurement Clients
 
 The project currently contains the following clients:
 - [Fitbit](fitbit)
+- [RunKeeper](runkeeper)
 - [Strava](strava)
 
 ## POM

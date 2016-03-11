@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Units of Measurement Clients for Agorava Copyright 2014-2016, Werner 
+<!-- Units of Measurement Clients for Agorava Copyright 2016, Werner 
 	Keil and individual contributors by the @author tag. Licensed under the Apache 
 	License, Version 2.0 (the "License"); you may not use this file except in 
 	compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
@@ -18,11 +18,10 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<version>0.4-SNAPSHOT</version>
-	<artifactId>uom-fitbit</artifactId>
+	<artifactId>uom-runkeeper</artifactId>
 	<packaging>pom</packaging>
-	<inceptionYear>2014</inceptionYear>
-
+    <inceptionYear>2016</inceptionYear>
+	
 	<!-- ======================================================= -->
 	<!-- Build Settings -->
 	<!-- ======================================================= -->
@@ -38,11 +37,11 @@
 	</properties>
 
 	<modules>
-		<module>uom-fitbit-api</module>  
-		<module>uom-fitbit-cdi</module>
+		<module>uom-runkeeper-api</module>
+		<module>uom-runkeeper-cdi</module>
 	</modules>
-	<name>Units of Measurement Client for Fitbit </name>
-	<description>Fitbit Client for Units of Measurement Health and Fitness Libraries</description>
+	<name>Units of Measurement Client for RunKeeper</name>
+	<description>RunKeeper Client for Units of Measurement Health and Fitness Libraries</description>
 
 	<dependencyManagement>
 		<dependencies>
@@ -85,7 +84,7 @@
 			</dependency>
 			<dependency>
 				<groupId>tec.uom.client</groupId>
-				<artifactId>uom-fitbit-api</artifactId>
+				<artifactId>uom-runkeeper-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

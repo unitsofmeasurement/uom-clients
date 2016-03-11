@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tec.uom.client</groupId>
+		<artifactId>uom-runkeeper</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>uom-runkeeper-api</artifactId>
+	<name>Units of Measurement for RunKeeper API</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.agorava</groupId>
+			<artifactId>agorava-core-api</artifactId>
+		</dependency>
+		  <dependency>
+            <groupId>org.agorava</groupId>
+            <artifactId>agorava-core-impl</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.measure</groupId>
+			<artifactId>unit-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.units</groupId>
+			<artifactId>unit-ri</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>systems.uom</groupId>
+			<artifactId>systems-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.lib</groupId>
+			<artifactId>uom-lib-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.domain</groupId>
+			<artifactId>uom-health-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tec.uom.domain</groupId>
+			<artifactId>uom-health</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.darwinsys</groupId>
+			<artifactId>hirondelle-date4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+	
+    <build>
+        <plugins>
+            <!-- ======================================================= -->
+            <!-- Source Attachment -->
+            <!-- ======================================================= -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

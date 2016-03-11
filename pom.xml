@@ -17,6 +17,18 @@
 	<packaging>pom</packaging>
     <inceptionYear>2014</inceptionYear>
     
+    <!-- ======================================================= -->
+    <!-- Build Settings -->
+    <!-- ======================================================= -->
+    <properties>
+        <jdkVersion>1.7</jdkVersion>
+        <project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
+        <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
+        <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
+        <ri.version>0.9-SNAPSHOT</ri.version>
+        <lib.version>0.9-SNAPSHOT</lib.version>
+    </properties>
+    
 	<scm>
 		<connection>scm:git:git://github.com/unitsofmeasurement/uom-fitbit</connection>
 		<developerConnection>scm:git:git@github.com:unitsofmeasurement/uom-fitbit.git</developerConnection>

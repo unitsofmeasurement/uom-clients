@@ -37,8 +37,8 @@
 	</properties>
 
 	<modules>
-		<module>uom-runkeeper-api</module>
-		<module>uom-runkeeper-cdi</module>
+		<module>uom-runkeeper-api</module> <!--  
+		<module>uom-runkeeper-cdi</module> -->
 	</modules>
 	<name>Units of Measurement Client for RunKeeper</name>
 	<description>RunKeeper Client for Units of Measurement Health and Fitness Libraries</description>

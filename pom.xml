@@ -30,15 +30,16 @@
     </properties>
     
 	<scm>
-		<connection>scm:git:git://github.com/unitsofmeasurement/uom-fitbit</connection>
-		<developerConnection>scm:git:git@github.com:unitsofmeasurement/uom-fitbit.git</developerConnection>
-		<url>http://github.com/unitsofmeasurement/uom-fitbit</url>
+		<connection>scm:git:git://github.com/unitsofmeasurement/uom-clients</connection>
+		<developerConnection>scm:git:git@github.com:unitsofmeasurement/uom-clients.git</developerConnection>
+		<url>http://github.com/unitsofmeasurement/uom-clients</url>
 		<tag>HEAD</tag>
 	</scm>
 	<modules>
 		<module>fitbit</module>
 		<module>runkeeper</module>
 		<module>strava</module>  
+		<module>withings</module>
 	</modules>
 	<name>Units of Measurement Clients</name>
 	<description>Units of Measurement Client Libraries</description>

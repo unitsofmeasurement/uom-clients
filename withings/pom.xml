@@ -29,8 +29,8 @@
 	</properties>
 
 	<modules>
-		<module>uom-withings-api</module>  <!-- 
-		<module>uom-withings-cdi</module>  -->
+		<module>uom-withings-api</module>
+		<module>uom-withings-cdi</module>
 	</modules>
 	<name>Units of Measurement Client for Withings</name>
 	<description>Withings Client for Units of Measurement Health and Fitness Libraries</description>

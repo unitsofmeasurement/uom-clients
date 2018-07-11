@@ -26,7 +26,7 @@
 	<!-- Build Settings -->
 	<!-- ======================================================= -->
 	<properties>
-		<systems.version>0.3-SNAPSHOT</systems.version>
+		<systems.version>0.7</systems.version>
 		<agorava.version>0.7.1-SNAPSHOT</agorava.version>
 	</properties>
 
@@ -69,12 +69,12 @@
 			<dependency>
 				<groupId>tec.uom.domain</groupId>
 				<artifactId>uom-health-api</artifactId>
-				<version>${lib.version}</version>
+				<version>${health.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>tec.uom.domain</groupId>
 				<artifactId>uom-health</artifactId>
-				<version>${lib.version}</version>
+				<version>${health.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>tec.uom.client</groupId>

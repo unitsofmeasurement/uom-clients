@@ -5,11 +5,11 @@ import javax.measure.quantity.Length;
 
 import tec.units.ri.unit.Units;
 import tec.units.ri.unit.MetricPrefix;
-import systems.uom.common.US;
+import systems.uom.common.USCustomary;
 
 public enum HeightUnits {
     CM(MetricPrefix.CENTI(Units.METRE)),
-    INCHES(US.INCH);
+    INCHES(USCustomary.INCH);
 
     Unit<Length> unitRepresentation;
 

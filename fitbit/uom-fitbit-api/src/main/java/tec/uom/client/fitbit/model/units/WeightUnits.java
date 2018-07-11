@@ -6,11 +6,11 @@ import javax.measure.Unit;
 import javax.measure.quantity.Mass;
 
 import systems.uom.common.Imperial;
-import systems.uom.common.US;
+import systems.uom.common.USCustomary;
 
 public enum WeightUnits {
     KG(KILOGRAM),
-    POUNDS(US.POUND),
+    POUNDS(USCustomary.POUND),
     STONE(Imperial.STONE);
 
     Unit<Mass> unitRepresentation;

@@ -1,6 +1,6 @@
 package tec.uom.client.fitbit.model.units;
 
-import static systems.uom.common.US.MILE;
+import static systems.uom.common.USCustomary.MILE;
 
 import javax.measure.Unit;
 import javax.measure.quantity.Length;

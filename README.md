@@ -4,6 +4,7 @@ uom-clients
 Units of Measurement Clients
 
 [![Circle CI](https://circleci.com/gh/unitsofmeasurement/uom-clients.svg?style=svg)](https://circleci.com/gh/unitsofmeasurement/uom-clients) 
+[![Stability: Experimental](https://masterminds.github.io/stability/experimental.svg)](https://masterminds.github.io/stability/experimental.html)
 
 The project currently contains the following clients:
 - [Fitbit](fitbit)
@@ -18,6 +19,5 @@ While we provide a Parent POM similar to other repositories, every client is fre
 Waffle.io
 ------------
 [![Stories in Ready](https://badge.waffle.io/unitsofmeasurement/uom-clients.png?label=ready&title=Ready)](https://waffle.io/unitsofmeasurement/uom-clients)
-[![Stories in Progress](https://badge.waffle.io/unitsofmeasurement/uom-clients.png?label=in%20progress&title=In Progress)](https://waffle.io/unitsofmeasurement/uom-clients)
 
 [![Throughput Graph](https://graphs.waffle.io/unitsofmeasurement/uom-clients/throughput.svg)](https://waffle.io/unitsofmeasurement/uom-clients/metrics)

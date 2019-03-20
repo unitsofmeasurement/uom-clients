@@ -16,8 +16,3 @@ While we provide a Parent POM similar to other repositories, every client is fre
 
 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://maven.org/)
 
-Waffle.io
-------------
-[![Stories in Ready](https://badge.waffle.io/unitsofmeasurement/uom-clients.png?label=ready&title=Ready)](https://waffle.io/unitsofmeasurement/uom-clients)
-
-[![Throughput Graph](https://graphs.waffle.io/unitsofmeasurement/uom-clients/throughput.svg)](https://waffle.io/unitsofmeasurement/uom-clients/metrics)

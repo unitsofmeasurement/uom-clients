@@ -6,13 +6,13 @@
 
 	<parent>
 		<artifactId>uom-parent</artifactId>
-		<groupId>tec.uom</groupId>
-		<version>1.0</version>
+		<groupId>tech.uom</groupId>
+		<version>2.0</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.4</version>
 	<artifactId>uom-clients</artifactId>
 	<packaging>pom</packaging>
     <inceptionYear>2014</inceptionYear>
@@ -41,6 +41,7 @@
 		<module>runkeeper</module>
 		<module>strava</module>  
 		<module>withings</module>
+		<!--  >module>desktop</module -->
 	</modules>
 	<name>Units of Measurement Clients</name>
 	<description>Units of Measurement Client Libraries</description>

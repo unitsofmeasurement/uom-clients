@@ -14,11 +14,11 @@
 	<parent>
 		<artifactId>uom-clients</artifactId>
 		<groupId>tec.uom.client</groupId>
-		<version>0.1-SNAPSHOT</version>
+		<version>0.4</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.4</version>
 	<artifactId>uom-strava</artifactId>
 	<packaging>pom</packaging>
 

@@ -6,13 +6,13 @@
 
 	<parent>
 		<artifactId>uom-parent</artifactId>
-		<groupId>tech.uom</groupId>
-		<version>2.0</version>
+		<groupId>tec.uom</groupId>
+		<version>1.0.6</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tec.uom.client</groupId>
-	<version>0.4</version>
+	<version>1.0</version>
 	<artifactId>uom-clients</artifactId>
 	<packaging>pom</packaging>
     <inceptionYear>2014</inceptionYear>

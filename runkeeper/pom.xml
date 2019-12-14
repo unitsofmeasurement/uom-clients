@@ -14,7 +14,7 @@
 	<parent>
 		<artifactId>uom-clients</artifactId>
 		<groupId>tec.uom.client</groupId>
-		<version>0.4</version>
+		<version>1.0</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -26,7 +26,7 @@
 	<!-- Build Settings -->
 	<!-- ======================================================= -->
 	<properties>
-		<systems.version>0.7</systems.version>
+		<systems.version>0.8</systems.version>
 		<agorava.version>0.7.1-SNAPSHOT</agorava.version>
 	</properties>
 

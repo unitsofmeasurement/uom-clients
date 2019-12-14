@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Units of Measurement Clients for Agorava Copyright 2014-2016, Werner 
+<!-- Units of Measurement Clients for Agorava Copyright 2014-2019, Werner 
 	Keil and individual contributors by the @author tag. Licensed under the Apache 
 	License, Version 2.0 (the "License"); you may not use this file except in 
 	compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
@@ -14,11 +14,11 @@
 	<parent>
 		<artifactId>uom-clients</artifactId>
 		<groupId>tec.uom.client</groupId>
-		<version>0.4</version>
+		<version>1.0</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<version>0.4</version>
+	<version>1.0</version>
 	<artifactId>uom-fitbit</artifactId>
 	<packaging>pom</packaging>
 	<inceptionYear>2014</inceptionYear>
@@ -27,7 +27,7 @@
 	<!-- Build Settings -->
 	<!-- ======================================================= -->
 	<properties>
-		<systems.version>0.7</systems.version>
+		<systems.version>0.8</systems.version>
 		<agorava.version>0.7.1-SNAPSHOT</agorava.version>
 	</properties>
 

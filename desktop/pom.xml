@@ -3,7 +3,7 @@
   <parent>
     <groupId>tec.uom.client</groupId>
     <artifactId>uom-clients</artifactId>
-    <version>0.4</version>
+    <version>1.0</version>
   </parent>
   <artifactId>uom-desktop</artifactId>
 </project>

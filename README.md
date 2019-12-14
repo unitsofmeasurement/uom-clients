@@ -7,9 +7,11 @@ Units of Measurement Clients
 [![Stability: Experimental](https://masterminds.github.io/stability/experimental.svg)](https://masterminds.github.io/stability/experimental.html)
 
 The project currently contains the following clients:
+- [Desktop](desktop)
 - [Fitbit](fitbit)
 - [RunKeeper](runkeeper)
 - [Strava](strava)
+- [Withings](withings)
 
 ## POM
 While we provide a Parent POM similar to other repositories, every client is free to use their own build system or programming language(s) as long as it makes sense in the Units of Measurement context. The license should be an approved [Open source license](https://opensource.org/licenses). Aside from that each client project may chose an appropriate license.

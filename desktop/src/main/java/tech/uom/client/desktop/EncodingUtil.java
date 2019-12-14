@@ -1,5 +1,5 @@
 /*
- * Units of Measurement Reference Implementation
+ * Units of Measurement Clients
  * Copyright (c) 2005-2019, Units of Measurement project.
  *
  * All rights reserved.
@@ -42,6 +42,7 @@ import java.util.Base64;
 
 import javax.measure.Quantity;
 
+import tech.units.indriya.quantity.NumberQuantity;
 import tech.units.indriya.quantity.time.TemporalQuantity;
 import tech.units.indriya.quantity.time.TimeUnitQuantity;
 
@@ -49,7 +50,7 @@ import tech.units.indriya.quantity.time.TimeUnitQuantity;
  * Provides support for JavaBeans XML serialization of {@link Quantity} instances.
  * @see {@link java.beans.XMLEncoder}
  * @author Andi Huber
- * @since 2.0.2
+ * @since 2.0
  */
 public class EncodingUtil {
 
@@ -86,7 +87,6 @@ public class EncodingUtil {
         
         return q;
     }
-
     
     // -- HELPER
     
@@ -117,5 +117,4 @@ public class EncodingUtil {
         }
     }
     
-
 }

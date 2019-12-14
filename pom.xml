@@ -6,13 +6,12 @@
 
 	<parent>
 		<artifactId>uom-parent</artifactId>
-		<groupId>tec.uom</groupId>
-		<version>1.0.6</version>
+		<groupId>tech.uom</groupId>
+		<version>2.0-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>tec.uom.client</groupId>
-	<version>1.0</version>
+	<groupId>tech.uom.client</groupId>
 	<artifactId>uom-clients</artifactId>
 	<packaging>pom</packaging>
     <inceptionYear>2014</inceptionYear>
@@ -21,6 +20,7 @@
     <!-- Build Settings -->
     <!-- ======================================================= -->
     <properties>
+    	<jsr.version>1.0</jsr.version>
         <jdkVersion>1.7</jdkVersion>
         <project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>

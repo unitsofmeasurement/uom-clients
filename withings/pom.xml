@@ -13,8 +13,8 @@
 
 	<parent>
 		<artifactId>uom-clients</artifactId>
-		<groupId>tec.uom.client</groupId>
-		<version>1.0</version>
+		<groupId>tech.uom.client</groupId>
+		<version>2.0-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -70,7 +70,7 @@
 				<version>${lib.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.uom.client</groupId>
+				<groupId>tech.uom.client</groupId>
 				<artifactId>uom-withings-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>

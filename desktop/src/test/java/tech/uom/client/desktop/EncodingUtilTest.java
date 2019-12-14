@@ -55,17 +55,17 @@ import tech.units.indriya.unit.Units;
 /**
  * Testing serialization round-trips for all built-in Quantity types. 
  */
-class EncodingUtilTest {
+public class EncodingUtilTest {
     
     private EncodingRoundtrip encodingRoundtrip;
     
     @BeforeEach
-    void setup() {
+    public void setup() {
         encodingRoundtrip = new EncodingRoundtrip();
     }
     
     @Test
-    void encodeDecodeRoundtripWhenCompound() throws IOException {
+    public void encodeDecodeRoundtripWhenCompound() throws IOException {
         @SuppressWarnings("unchecked")
         Quantity<?> quantity = Quantities.getQuantity(
                 new Number[]{1, 2, 3}, 
@@ -82,7 +82,7 @@ class EncodingUtilTest {
     @ParameterizedTest(name = "{index} => unit=''{0}'', amount=''{1}'' ")
     @DisplayName("XML serialization roundtrip spanning {Unit, Amount} should succeed")
     @MethodSource("provideRoundtripArgs_unit_amount")
-    void encodeDecodeRoundtrip(Unit<?> unit, Number amount) throws IOException {
+    public void encodeDecodeRoundtrip(Unit<?> unit, Number amount) throws IOException {
         Quantity<?> quantity = Quantities.getQuantity(amount, unit);
         encodingRoundtrip.test(quantity);
     }
@@ -95,7 +95,7 @@ class EncodingUtilTest {
     @ParameterizedTest(name = "{index} => unit=''{0}'', prefix=''{1}'' ")
     @DisplayName("XML serialization roundtrip spanning {Unit, Prefix} should succeed")
     @MethodSource("provideRoundtripArgs_unit_prefix")
-    void encodeDecodeRoundtrip(Unit<?> unit, Prefix prefix) throws IOException {
+    public void encodeDecodeRoundtrip(Unit<?> unit, Prefix prefix) throws IOException {
         Quantity<?> quantity = Quantities.getQuantity(1.2345, unit.prefix(prefix));
         encodingRoundtrip.test(quantity);
     }       

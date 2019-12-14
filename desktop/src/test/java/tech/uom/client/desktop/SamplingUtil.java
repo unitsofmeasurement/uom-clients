@@ -45,7 +45,7 @@ import tech.units.indriya.function.RationalNumber;
 import tech.units.indriya.quantity.Quantities;
 import tech.units.indriya.quantity.time.TemporalQuantity;
 import tech.units.indriya.unit.Units;
-import tech.uom.client.desktop.RoundtripUtil.NonPrefixedUnits;
+import tech.uom.client.desktop.UnitFormatRoundtripUtil.NonPrefixedUnits;
 
 /**
  * Samples Units, Numbers and Prefixes to feed test cases.

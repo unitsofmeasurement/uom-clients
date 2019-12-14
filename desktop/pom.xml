@@ -1,46 +1,55 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>tech.uom.client</groupId>
-    <artifactId>uom-clients</artifactId>
-    <version>2.0-SNAPSHOT</version>
-  </parent>
-  <artifactId>uom-desktop</artifactId>
-  <name>Units of Measurement Desktop Client</name>
-    <!-- ======================================================= -->
-    <!-- Build Settings -->
-    <!-- ======================================================= -->
-    <properties>
-        <project.build.javaVersion>1.8</project.build.javaVersion>
-        <jdkVersion>1.8</jdkVersion>
-        <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-        <api.version>2.0</api.version>
-        <impl.version>2.0.1</impl.version>
-        <lib.version>2.0</lib.version> <!-- currently unused -->
-        <hamcrest.version>2.0.0.0</hamcrest.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tech.uom.client</groupId>
+		<artifactId>uom-clients</artifactId>
+		<version>2.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>uom-desktop</artifactId>
+	<name>Units of Measurement Desktop Client</name>
+	<!-- ======================================================= -->
+	<!-- Build Settings -->
+	<!-- ======================================================= -->
+	<properties>
+		<project.build.javaVersion>1.8</project.build.javaVersion>
+		<jdkVersion>1.8</jdkVersion>
+		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
+		<api.version>2.0</api.version>
+		<impl.version>2.0.1</impl.version>
+		<lib.version>2.0</lib.version> <!-- currently unused -->
+		<hamcrest.version>2.0.0.0</hamcrest.version>
 		<junit.platform.version>1.1.0</junit.platform.version>
-    </properties>
-    
-       <dependencies>
-        <!-- =========================================================================================================== -->
-        <!-- The units of measurement interface is in the javax.measure package. -->
-        <!-- The implementation is provided by JSR 363 -->
-        <!-- =========================================================================================================== -->
-        <dependency>
-            <groupId>javax.measure</groupId>
-            <artifactId>unit-api</artifactId>
-            <version>2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>tech.units</groupId>
-            <artifactId>indriya</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>tech.uom.lib</groupId>
-            <artifactId>uom-lib-common</artifactId>
-            <version>${lib.version}</version>
-        </dependency>
+		
+				<!-- Plugins -->
+		<felix.version>3.4.0</felix.version>
+		<maven.jar.version>3.1.0</maven.jar.version>
+		<maven.source.version>3.1.0</maven.source.version>
+		<maven.javadoc.version>3.1.1</maven.javadoc.version>
+		
+	</properties>
+
+	<dependencies>
+		<!-- =========================================================================================================== -->
+		<!-- The units of measurement interface is in the javax.measure package. -->
+		<!-- The implementation is provided by JSR 363 -->
+		<!-- =========================================================================================================== -->
+		<dependency>
+			<groupId>javax.measure</groupId>
+			<artifactId>unit-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>tech.units</groupId>
+			<artifactId>indriya</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>tech.uom.lib</groupId>
+			<artifactId>uom-lib-common</artifactId>
+			<version>${lib.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -78,5 +87,176 @@
 			<version>${junit.platform.version}</version>
 			<scope>test</scope>
 		</dependency>
-    </dependencies>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Compilation -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>9</source>
+					<target>9</target>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default-compile</id>
+						<configuration>
+							<!-- compile everything to ensure module-info contains right entries -->
+							<!-- required when JAVA_HOME is JDK 8 or below -->
+							<jdkToolchain>
+								<version>9</version>
+							</jdkToolchain>
+							<release>9</release>
+						</configuration>
+					</execution>
+					<execution>
+						<id>base-compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<!-- recompile everything for target VM except the module-info.java -->
+						<configuration>
+							<source>${maven.compile.sourceLevel}</source>
+							<target>${maven.compile.targetLevel}</target>
+							<excludes>
+								<exclude>tech/units/indriya/module-info.java</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>${junit.platform.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- JAR packaging -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Specification-Title>Unit API</Specification-Title>
+							<Specification-Version>${project.version}</Specification-Version>
+							<Specification-Vendor>Unit-API contributors</Specification-Vendor>
+							<Implementation-Title>${project.name}</Implementation-Title>
+							<Implementation-Version>${project.version}</Implementation-Version>
+							<Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
+							<Implementation-URL>http://units.tech</Implementation-URL>
+						</manifestEntries>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Packaging (OSGi bundle) -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+
+			<!-- Code analysis -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+					<targetJdk>${project.build.javaVersion}</targetJdk>
+				</configuration>
+			</plugin>
+
+			<!-- Test results -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>${junit.platform.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- Report on test results -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.16</version>
+			</plugin>
+
+			<!-- Attach Sources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Attach JavaDocs -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven.javadoc.version}</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<detectLinks>true</detectLinks>
+					<keywords>true</keywords>
+					<linksource>true</linksource>
+					<failOnError>false</failOnError>
+					<source>${maven.compile.sourceLevel}</source>
+					<verbose>true</verbose>
+					<tags>
+						<tag>
+							<name>apiNote</name>
+							<placement>a</placement>
+							<head>API Note:</head>
+						</tag>
+						<tag>
+							<name>implSpec</name>
+							<placement>a</placement>
+							<head>Implementation Requirements:</head>
+						</tag>
+					</tags>
+					<sourceFileExcludes>
+						<exclude>**/module-info.java</exclude>
+					</sourceFileExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

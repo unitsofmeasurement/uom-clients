@@ -52,7 +52,7 @@ import tech.units.indriya.quantity.time.TimeUnitQuantity;
  * @author Andi Huber
  * @since 2.0
  */
-public class EncodingUtil {
+public class QuantityBeanEncoder {
 
     public static void setupXMLEncoder(XMLEncoder encoder) {
         encoder.setPersistenceDelegate(NumberQuantity.class, QUANTITY_PERSISTENCE_DELEGATE);
@@ -109,7 +109,7 @@ public class EncodingUtil {
             
             return new Expression(
                     oldInstance,
-                    EncodingUtil.class,
+                    QuantityBeanEncoder.class,
                     "base64Decode",
                     new Object[]{
                             base64EncodedQuantity

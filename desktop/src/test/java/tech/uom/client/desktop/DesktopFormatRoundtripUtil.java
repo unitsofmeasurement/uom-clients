@@ -80,7 +80,7 @@ import javax.measure.format.UnitFormat;
  *   
  * @author Andi Huber
  */
-class UnitFormatRoundtripUtil {
+class DesktopFormatRoundtripUtil {
 
   /**
    * (Supposed) complete set of built-in non-prefixed Units.

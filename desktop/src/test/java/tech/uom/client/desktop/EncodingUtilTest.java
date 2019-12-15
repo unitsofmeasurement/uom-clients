@@ -146,7 +146,7 @@ public class EncodingUtilTest {
             // write XML to buffer
             try(ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
                 XMLEncoder encoder = new XMLEncoder(bos);
-                EncodingUtil.setupXMLEncoder(encoder);
+                QuantityBeanEncoder.setupXMLEncoder(encoder);
 
                 encoder.writeObject(originalQuantity);
                 encoder.close();

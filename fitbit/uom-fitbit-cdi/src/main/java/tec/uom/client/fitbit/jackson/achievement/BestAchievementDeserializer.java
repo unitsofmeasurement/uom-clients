@@ -17,15 +17,15 @@ package tec.uom.client.fitbit.jackson.achievement;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
-import tec.units.ri.unit.Units;
+import tech.units.indriya.quantity.Quantities;
+import tech.units.indriya.unit.Units;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.archievement.BestAchievement;
 import tec.uom.client.fitbit.model.units.UnitSystem;
 import tec.uom.client.fitbit.model.user.UserInfo;
-import tec.uom.domain.health.Floor;
-import tec.uom.domain.health.Step;
-import tec.uom.domain.health.unit.Health;
+import tech.uom.domain.health.Floor;
+import tech.uom.domain.health.Step;
+import tech.uom.domain.health.unit.Health;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

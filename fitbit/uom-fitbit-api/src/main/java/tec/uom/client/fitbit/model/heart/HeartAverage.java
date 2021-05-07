@@ -18,7 +18,7 @@ package tec.uom.client.fitbit.model.heart;
 
 import javax.measure.Quantity;
 
-import tec.uom.domain.health.HeartRate;
+import tech.uom.domain.health.HeartRate;
 
 /**
  * Created by IntelliJ IDEA.

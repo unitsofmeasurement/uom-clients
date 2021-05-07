@@ -1,11 +1,11 @@
 package tec.uom.client.fitbit.model.units;
 
-import static tec.units.ri.unit.Units.*;
+import static tech.units.indriya.unit.Units.*;
 
 import javax.measure.Unit;
 import javax.measure.quantity.Time;
 
-import tec.units.ri.unit.MetricPrefix;
+import javax.measure.MetricPrefix;
 
 public enum DurationUnits {
     MS(MetricPrefix.MILLI(SECOND)),

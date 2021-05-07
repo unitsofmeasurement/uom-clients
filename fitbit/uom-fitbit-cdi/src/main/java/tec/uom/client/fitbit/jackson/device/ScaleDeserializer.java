@@ -2,7 +2,7 @@ package tec.uom.client.fitbit.jackson.device;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.device.Scale;
 import tec.uom.client.fitbit.model.device.ScaleVersion;

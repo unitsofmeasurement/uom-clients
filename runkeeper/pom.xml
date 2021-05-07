@@ -27,7 +27,7 @@
 	<!-- ======================================================= -->
 	<properties>
 		<systems.version>0.8</systems.version>
-		<agorava.version>0.7.1-SNAPSHOT</agorava.version>
+		<agorava.version>1.0.0</agorava.version>
 	</properties>
 
 	<modules>
@@ -52,12 +52,12 @@
 				<version>${jsr.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.units</groupId>
-				<artifactId>unit-ri</artifactId>
+				<groupId>tech.units</groupId>
+				<artifactId>indriya</artifactId>
 				<version>${ri.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.uom.lib</groupId>
+				<groupId>tech.uom.lib</groupId>
 				<artifactId>uom-lib-common</artifactId>
 				<version>${lib.version}</version>
 			</dependency>
@@ -67,12 +67,12 @@
                 <version>${systems.version}</version>
             </dependency>
 			<dependency>
-				<groupId>tec.uom.domain</groupId>
+				<groupId>tech.uom.domain</groupId>
 				<artifactId>uom-health-api</artifactId>
 				<version>${health.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tec.uom.domain</groupId>
+				<groupId>tech.uom.domain</groupId>
 				<artifactId>uom-health</artifactId>
 				<version>${health.version}</version>
 			</dependency>

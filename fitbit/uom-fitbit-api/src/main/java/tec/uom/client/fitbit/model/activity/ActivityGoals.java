@@ -21,8 +21,8 @@ import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 import javax.measure.quantity.Time;
 
-import tec.uom.domain.health.Floor;
-import tec.uom.domain.health.Step;
+import tech.uom.domain.health.Floor;
+import tech.uom.domain.health.Step;
 
 /**
  * Created by IntelliJ IDEA.

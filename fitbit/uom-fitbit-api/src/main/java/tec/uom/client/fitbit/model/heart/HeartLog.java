@@ -20,8 +20,8 @@ import hirondelle.date4j.DateTime;
 
 import javax.measure.Quantity;
 
-import tec.uom.lib.common.function.LongIdentifiable;
-import tec.uom.domain.health.HeartRate;
+import tech.uom.lib.common.function.LongIdentifiable;
+import tech.uom.domain.health.HeartRate;
 
 /**
  * User: Werner

@@ -5,7 +5,7 @@ import hirondelle.date4j.DateTime;
 import java.io.IOException;
 import java.util.Locale;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.model.units.DistanceUnits;
 import tec.uom.client.fitbit.model.units.HeightUnits;
 import tec.uom.client.fitbit.model.units.UnitSystem;

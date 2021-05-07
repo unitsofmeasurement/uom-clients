@@ -22,7 +22,7 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Mass;
 
-import tec.uom.lib.common.function.Nameable;
+import tech.uom.lib.common.function.Nameable;
 
 /**
  * User: Anakar Parida

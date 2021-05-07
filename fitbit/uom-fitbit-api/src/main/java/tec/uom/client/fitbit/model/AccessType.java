@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Units of Measurement
+ * Copyright 2015, 2021 Units of Measurement
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 package tec.uom.client.fitbit.model;
 
-import tec.uom.lib.common.function.DescriptionSupplier;
-import tec.uom.lib.common.function.IntIdentifiable;
-import tec.uom.lib.common.function.LabelSupplier;
+import tech.uom.lib.common.function.DescriptionSupplier;
+import tech.uom.lib.common.function.IntIdentifiable;
+//import tech.uom.lib.common.function.LabelSupplier;
 
-public enum AccessType implements IntIdentifiable, DescriptionSupplier,
-		LabelSupplier {
+public enum AccessType implements IntIdentifiable, DescriptionSupplier {
+		//LabelSupplier {
 	READ(0, "Read-only", "read"), 
 	READ_WRITE(1, "Read & Write", "read and write");
 

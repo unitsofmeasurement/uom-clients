@@ -7,7 +7,7 @@
 		<version>2.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>uom-withings-cdi</artifactId>
-	<name>Units of Measurement for withings CDI Implementation</name>
+	<name>Units of Measurement for Withings CDI Implementation</name>
 
 	<dependencies>
 		<dependency>

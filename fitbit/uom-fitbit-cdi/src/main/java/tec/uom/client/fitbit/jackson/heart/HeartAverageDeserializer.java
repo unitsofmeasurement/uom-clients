@@ -18,9 +18,9 @@ package tec.uom.client.fitbit.jackson.heart;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.model.heart.HeartAverage;
-import tec.uom.domain.health.unit.Health;
+import tech.uom.domain.health.unit.Health;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -26,9 +26,9 @@ import hirondelle.date4j.DateTime;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.model.heart.HeartLog;
-import tec.uom.domain.health.unit.Health;
+import tech.uom.domain.health.unit.Health;
 
 /**
  * User: Werner

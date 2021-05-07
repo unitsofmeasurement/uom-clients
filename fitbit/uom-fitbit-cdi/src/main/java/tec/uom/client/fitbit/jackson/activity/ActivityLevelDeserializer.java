@@ -2,8 +2,8 @@ package tec.uom.client.fitbit.jackson.activity;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
-import tec.units.ri.unit.Units;
+import tech.units.indriya.quantity.Quantities;
+import tech.units.indriya.unit.Units;
 import tec.uom.client.fitbit.model.activity.ActivityLevel;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -26,9 +26,9 @@ public class ActivityLevelDeserializer extends JsonDeserializer<ActivityLevel> {
 		ActivityLevel activityLevel = new ActivityLevel(
 				data.get("id").asLong(), data.get("name").asText(),
 				Quantities.getQuantity(data.get("minSpeed").numberValue(),
-						Units.METRES_PER_SECOND), Quantities.getQuantity(
+						Units.METRE_PER_SECOND), Quantities.getQuantity(
 						data.get("maxSpeed").numberValue(),
-						Units.METRES_PER_SECOND));
+						Units.METRE_PER_SECOND));
 		return activityLevel;
 	}
 }

@@ -18,7 +18,7 @@ package tec.uom.client.fitbit.jackson.body;
 
 import java.io.IOException;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.body.Body;
 import tec.uom.client.fitbit.model.units.UnitSystem;

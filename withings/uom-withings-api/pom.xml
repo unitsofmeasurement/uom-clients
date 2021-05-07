@@ -6,7 +6,7 @@
     <version>2.0-SNAPSHOT</version>
   </parent>
   <artifactId>uom-withings-api</artifactId>
-  <name>Units of Measurement for withings API</name>
+  <name>Units of Measurement for Withings API</name>
   
     <dependencies>
         <dependency>
@@ -22,11 +22,11 @@
             <artifactId>unit-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>tec.units</groupId>
-            <artifactId>unit-ri</artifactId>
+            <groupId>tech.units</groupId>
+            <artifactId>indriya</artifactId>
         </dependency>
         <dependency>
-            <groupId>tec.uom.lib</groupId>
+            <groupId>tech.uom.lib</groupId>
             <artifactId>uom-lib-common</artifactId>
         </dependency>
         <!-- 
@@ -35,11 +35,11 @@
             <artifactId>systems-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>tec.uom.domain</groupId>
+            <groupId>tech.uom.domain</groupId>
             <artifactId>uom-health-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>tec.uom.domain</groupId>
+            <groupId>tech.uom.domain</groupId>
             <artifactId>uom-health</artifactId>
         </dependency>
         <dependency>

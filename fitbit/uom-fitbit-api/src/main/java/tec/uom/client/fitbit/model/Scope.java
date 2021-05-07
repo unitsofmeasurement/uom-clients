@@ -16,8 +16,8 @@
 
 package tec.uom.client.fitbit.model;
 
-import tec.uom.lib.common.function.DescriptionSupplier;
-import tec.uom.lib.common.function.Identifiable;
+import tech.uom.lib.common.function.DescriptionSupplier;
+import tech.uom.lib.common.function.Identifiable;
 
 /**
  * 

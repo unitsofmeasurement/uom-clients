@@ -3,7 +3,7 @@ package tec.uom.client.fitbit.jackson.food;
 import java.io.IOException;
 import java.util.UUID;
 
-import tec.units.ri.quantity.Quantities;
+import tech.units.indriya.quantity.Quantities;
 import tec.uom.client.fitbit.jackson.user.UserInfoDeserializer;
 import tec.uom.client.fitbit.model.food.FoodUnitEntry;
 import tec.uom.client.fitbit.model.units.UnitSystem;

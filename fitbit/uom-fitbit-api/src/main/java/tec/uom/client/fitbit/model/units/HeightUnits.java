@@ -3,8 +3,8 @@ package tec.uom.client.fitbit.model.units;
 import javax.measure.Unit;
 import javax.measure.quantity.Length;
 
-import tec.units.ri.unit.Units;
-import tec.units.ri.unit.MetricPrefix;
+import tech.units.indriya.unit.Units;
+import javax.measure.MetricPrefix;
 import systems.uom.common.USCustomary;
 
 public enum HeightUnits {

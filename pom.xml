@@ -10,6 +10,7 @@
 		<version>2.0.1</version>
 	</parent>
 
+    <version>2.0-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.uom.client</groupId>
 	<artifactId>uom-clients</artifactId>
@@ -20,14 +21,14 @@
     <!-- Build Settings -->
     <!-- ======================================================= -->
     <properties>
-    	<jsr.version>1.0</jsr.version>
+    	<jsr.version>2.0</jsr.version>
         <jdkVersion>1.7</jdkVersion>
         <project.build.javaVersion>${jdkVersion}</project.build.javaVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-        <ri.version>1.0</ri.version>
-        <lib.version>1.0</lib.version>
-        <health.version>0.9</health.version>
+        <ri.version>2.0</ri.version>
+        <lib.version>2.0</lib.version>
+        <health.version>2.0</health.version>
     </properties>
     
 	<scm>
@@ -55,30 +56,33 @@
     <repositories>
         <repository>
             <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-release</id>
-            <name>libs-release</name>
-            <url>http://oss.jfrog.org/artifactory/libs-release</url>
-        </repository>
-        <repository>
-            <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-            <id>bintray-snapshot</id>
-            <name>libs-snapshot</name>
-            <url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
+            <id>ossrh-snapshot</id>
+            <name>OSSRH Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+             <repository>
+            <id>repository.jboss.org</id>
+            <name>JBoss Repository</name>
+            <url>http://repository.jboss.org/maven2</url>
         </repository>
         <repository>
             <id>geotoolkit</id>
             <name>Geotoolkit.org project</name>
             <url>http://maven.geotoolkit.org</url>
         </repository>
-        <repository>
-            <id>jcenter</id>
-            <name>JCenter</name>
-            <url>http://jcenter.bintray.com</url>
-        </repository>
     </repositories>
-    <version>2.0-SNAPSHOT</version>
+    
+    <!-- Deployment to public servers -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>    
+    </distributionManagement>
 </project>

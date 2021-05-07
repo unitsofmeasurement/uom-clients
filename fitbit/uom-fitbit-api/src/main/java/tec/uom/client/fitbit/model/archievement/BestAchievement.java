@@ -20,8 +20,8 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import javax.measure.quantity.Length;
 
-import tec.uom.domain.health.Floor;
-import tec.uom.domain.health.Step;
+import tech.uom.domain.health.Floor;
+import tech.uom.domain.health.Step;
 
 /**
  * Created by Jboss Studio. 

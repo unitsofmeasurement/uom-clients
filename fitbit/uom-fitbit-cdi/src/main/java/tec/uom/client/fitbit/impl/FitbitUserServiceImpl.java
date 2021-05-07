@@ -17,8 +17,8 @@ package tec.uom.client.fitbit.impl;
 
 import java.util.Locale;
 
-import tec.units.ri.quantity.Quantities;
-import tec.units.ri.unit.Units;
+import tech.units.indriya.quantity.Quantities;
+import tech.units.indriya.unit.Units;
 import tec.uom.client.fitbit.Fitbit;
 import tec.uom.client.fitbit.FitbitBaseService;
 import tec.uom.client.fitbit.FitbitUserService;

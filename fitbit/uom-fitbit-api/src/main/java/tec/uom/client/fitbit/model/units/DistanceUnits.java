@@ -5,8 +5,8 @@ import static systems.uom.common.USCustomary.MILE;
 import javax.measure.Unit;
 import javax.measure.quantity.Length;
 
-import tec.units.ri.unit.Units;
-import tec.units.ri.unit.MetricPrefix;
+import tech.units.indriya.unit.Units;
+import javax.measure.MetricPrefix;
 
 public enum DistanceUnits {
     METRIC(MetricPrefix.KILO(Units.METRE)),

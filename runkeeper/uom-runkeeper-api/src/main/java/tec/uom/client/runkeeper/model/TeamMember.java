@@ -15,8 +15,8 @@
  */
 package tec.uom.client.runkeeper.model;
 
-import tec.uom.lib.common.function.LongIdentifiable;
-import tec.uom.lib.common.function.Nameable;
+import tech.uom.lib.common.function.LongIdentifiable;
+import tech.uom.lib.common.function.Nameable;
 
 public class TeamMember implements LongIdentifiable, Nameable {
 

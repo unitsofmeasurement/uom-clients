@@ -1,6 +1,6 @@
 package tec.uom.client.fitbit.model.units;
 
-import static tec.units.ri.unit.Units.*;
+import static tech.units.indriya.unit.Units.*;
 
 import javax.measure.Unit;
 import javax.measure.quantity.Mass;

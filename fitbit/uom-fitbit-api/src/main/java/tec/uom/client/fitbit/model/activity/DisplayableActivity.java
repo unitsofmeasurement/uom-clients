@@ -16,8 +16,8 @@
 
 package tec.uom.client.fitbit.model.activity;
 
-import tec.uom.lib.common.function.LongIdentifiable;
-import tec.uom.lib.common.function.Nameable;
+import tech.uom.lib.common.function.LongIdentifiable;
+import tech.uom.lib.common.function.Nameable;
 
 /**
  * User: Anakar Parida
